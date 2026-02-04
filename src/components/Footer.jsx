@@ -32,10 +32,13 @@ const Footer = () => {
                     <div>
                         <h3 className="font-bold text-white mb-6">Services</h3>
                         <ul className="space-y-4">
-                            {content.services.marketing.slice(0, 3).map((s, i) => (
-                                <li key={i}><a href="#" className="text-slate-400 hover:text-purple-400 transition-colors">{s.title}</a></li>
+                            {['social', 'design', 'branding', 'digital'].map((key) => (
+                                <li key={key}>
+                                    <a href="#services" className="capitalize text-slate-400 hover:text-purple-400 transition-colors">
+                                        {key} Services
+                                    </a>
+                                </li>
                             ))}
-                            <li><a href="#" className="text-slate-400 hover:text-purple-400 transition-colors">ERPNext Implementation</a></li>
                         </ul>
                     </div>
 
