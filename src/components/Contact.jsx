@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
+import { content } from '../data/content';
 
 const Contact = () => {
     const [submitted, setSubmitted] = useState(false);
