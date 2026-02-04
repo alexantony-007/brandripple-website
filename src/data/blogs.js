@@ -4,7 +4,7 @@ export const blogs = [
         title: "Why Brand Identity is Important for Your Business",
         category: "Branding",
         date: "October 24, 2023",
-        image: "https://images.unsplash.com/photo-1560416313-2d17672297af?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
         content: "Your brand identity is far more than just a visible logo or a catchy color palette; it is the entire personality of your business and the promise you make to your customers. A strong brand identity builds different types of trust and credibility, distinguishing you instantly from competitors in a crowded marketplace. It dictates how your audience perceives you, how they feel when they interact with your products, and ultimately, whether they choose to buy from you. Consistency in your identity—across your website, social media, and packaging—creates a memorable experience that fosters customer loyalty. Without a clear identity, you are just another commodity; with one, you become a story that people want to be a part of. Investing in your brand identity is investing in the long-term future and equity of your company."
     },
     {
@@ -12,7 +12,7 @@ export const blogs = [
         title: "Why Social Media Managers Are Essential for Optimization",
         category: "Social Media",
         date: "November 12, 2023",
-        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
         content: "Social media optimization is not just about posting pretty pictures; it’s a strategic game of data, timing, and engagement. Expert social media managers understand the ever-changing algorithms of platforms like Instagram, LinkedIn, and Facebook. They know exactly when your specific audience is online, what content formats trigger the most engagement, and how to use hashtags effectively to reach non-followers. They ensure your website and social profiles talk to each other seamlessy, creating a unified funnel. By analyzing metrics and KPIs, they tweak campaigns in real-time to lower ad costs and increase conversions. Attempting to manage this optimization on your own often leads to burnout and wasted budget. A dedicated manager ensures every post serves a business purpose, turning casual scrollers into loyal brand advocates."
     },
     {
