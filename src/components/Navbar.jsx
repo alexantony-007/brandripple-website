@@ -40,6 +40,7 @@ const Navbar = () => {
                             {link.label}
                         </a>
                     ))}
+                    <a href="#blog" className="text-slate-300 hover:text-white transition-colors">Blog</a>
                     <a href="#contact" className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium hover:from-purple-500 hover:to-indigo-500 transition-all transform hover:scale-105 shadow-lg shadow-purple-900/50">
                         Get Started
                     </a>
@@ -64,6 +65,13 @@ const Navbar = () => {
                             {link.label}
                         </a>
                     ))}
+                    <a
+                        href="#blog"
+                        className="text-lg text-slate-300 hover:text-white"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                        Blog
+                    </a>
                     <a
                         href="#contact"
                         className="w-full text-center py-3 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium shadow-lg"

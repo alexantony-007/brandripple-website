@@ -78,6 +78,7 @@ export const content = {
         links: [
             { label: "Services", href: "#services" },
             { label: "Our Process", href: "#process" },
+            { label: "Blog", href: "#blog" },
             { label: "Contact", href: "#contact" },
         ]
     }

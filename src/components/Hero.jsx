@@ -28,7 +28,7 @@ const Hero = () => {
                                 {content.hero.cta}
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </a>
-                            <a href="#about" className="flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-slate-800 text-white font-medium hover:bg-slate-700 transition-all border border-slate-700 hover:border-slate-600">
+                            <a href="#process" className="flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-slate-800 text-white font-medium hover:bg-slate-700 transition-all border border-slate-700 hover:border-slate-600">
                                 Learn More
                             </a>
                         </div>
