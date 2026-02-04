@@ -5,13 +5,6 @@ import { content } from '../data/content';
 const Contact = () => {
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubmitted(true);
-        // Simulate form submission logic
-        setTimeout(() => setSubmitted(false), 3000);
-    };
-
     return (
         <section id="contact" className="py-24 relative overflow-hidden">
             {/* Background Gradients */}
@@ -42,39 +35,62 @@ const Contact = () => {
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-2">Message Received!</h3>
                             <p className="text-slate-300">We'll be in touch within 24 hours.</p>
+                            <button onClick={() => setSubmitted(false)} className="mt-6 text-purple-400 hover:text-purple-300 underline">Send another message</button>
                         </div>
                     ) : (
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-slate-300">Full Name</label>
-                                    <input type="text" required className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all" placeholder="John Doe" />
+                        <>
+                            <iframe name="hidden_iframe" id="hidden_iframe" style={{ display: 'none' }}></iframe>
+                            <form
+                                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSen0LoRNgh_U422wGjCUQccHaNICfjsXkHViqbZHUSY7dsEgQ/formResponse"
+                                method="POST"
+                                target="hidden_iframe"
+                                onSubmit={() => setSubmitted(true)}
+                                className="space-y-6"
+                            >
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-medium text-slate-300">Full Name</label>
+                                        <input
+                                            type="text"
+                                            name="entry.2146784590"
+                                            required
+                                            className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                            placeholder="John Doe"
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-medium text-slate-300">Email Address</label>
+                                        <input
+                                            type="email"
+                                            name="entry.1177185524"
+                                            required
+                                            className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                            placeholder="john@company.com"
+                                        />
+                                    </div>
                                 </div>
+
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-slate-300">Email Address</label>
-                                    <input type="email" required className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all" placeholder="john@company.com" />
+                                    <label className="text-sm font-medium text-slate-300">How can we help?</label>
+                                    <textarea
+                                        name="entry.963217449"
+                                        required
+                                        rows="4"
+                                        className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                        placeholder="Tell us about your challenges..."
+                                    ></textarea>
                                 </div>
-                            </div>
 
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-300">Company Name</label>
-                                <input type="text" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all" placeholder="Brandripple Ops" />
-                            </div>
+                                <button type="submit" className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-lg hover:from-purple-500 hover:to-indigo-500 transition-all transform hover:scale-[1.02] shadow-lg shadow-purple-900/50 flex items-center justify-center gap-2">
+                                    Send Message
+                                    <Send size={20} />
+                                </button>
 
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-300">How can we help?</label>
-                                <textarea required rows="4" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all" placeholder="Tell us about your challenges..."></textarea>
-                            </div>
-
-                            <button type="submit" className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-lg hover:from-purple-500 hover:to-indigo-500 transition-all transform hover:scale-[1.02] shadow-lg shadow-purple-900/50 flex items-center justify-center gap-2">
-                                Send Message
-                                <Send size={20} />
-                            </button>
-
-                            <p className="text-center text-xs text-slate-500 mt-4">
-                                By submitting, you agree to our privacy policy. We hate spam too.
-                            </p>
-                        </form>
+                                <p className="text-center text-xs text-slate-500 mt-4">
+                                    By submitting, you agree to our privacy policy. We hate spam too.
+                                </p>
+                            </form>
+                        </>
                     )}
                 </div>
             </div>
