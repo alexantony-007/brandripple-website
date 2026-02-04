@@ -3,31 +3,48 @@ import { content } from '../data/content';
 
 const Plan = () => {
     return (
-        <section className="py-24 bg-slate-900">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{content.plan.heading}</h2>
+        <section id="process" className="py-24 bg-slate-950 relative overflow-hidden">
+            {/* Background Elements */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-3xl mix-blend-screen opacity-20 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl mix-blend-screen opacity-20 pointer-events-none"></div>
+
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="text-center mb-20">
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                        {content.plan.heading}
+                    </h2>
+                    <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+                        A structured approach to ensure consistency, quality, and measurable results.
+                    </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 relative">
-                    {/* Connector Line for Desktop */}
-                    <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-purple-500/30 via-indigo-500/30 to-purple-500/30 border-t border-dashed border-slate-600 -z-0"></div>
-
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {content.plan.steps.map((step, index) => (
-                        <div key={index} className="relative z-10 flex flex-col items-center text-center">
-                            <div className="w-24 h-24 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center mb-8 shadow-xl shadow-indigo-900/20 group hover:scale-110 transition-transform duration-300">
-                                <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-indigo-400">
-                                    {step.number}
-                                </span>
+                        <div key={index} className="relative group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-900/10">
+                            {/* Step Number */}
+                            <div className="absolute -top-4 -left-4 w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-xl font-bold text-white shadow-lg group-hover:scale-110 group-hover:bg-purple-600 group-hover:border-purple-500 transition-all duration-300">
+                                {step.number}
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
-                            <p className="text-slate-400 max-w-xs">{step.desc}</p>
+
+                            <div className="mt-4">
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                                    {step.title}
+                                </h3>
+                                <p className="text-sm text-slate-400 leading-relaxed">
+                                    {step.desc}
+                                </p>
+                            </div>
+
+                            {/* Connector Line (Visual only, hidden on mobile/last item) */}
+                            {index < content.plan.steps.length - 1 && (
+                                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-px bg-slate-800 z-0"></div>
+                            )}
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-16 text-center">
-                    <a href="#contact" className="inline-block px-10 py-4 rounded-full bg-white text-slate-900 font-bold text-lg hover:bg-slate-200 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <div className="mt-20 text-center">
+                    <a href="#contact" className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-full bg-white text-slate-900 font-bold text-lg hover:bg-slate-200 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                         Start Your Journey
                     </a>
                 </div>

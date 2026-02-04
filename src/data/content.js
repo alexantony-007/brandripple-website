@@ -39,29 +39,45 @@ export const content = {
         ]
     },
     services: {
-        marketing: [
-            { title: "Social Media Optimization", desc: "Expert handling of Google, Instagram, Facebook, and LinkedIn profiles." },
-            { title: "Brand Identity Creation", desc: "Crafting a visual and verbal identity that resonates with your audience." },
-            { title: "Content Calendar Creation", desc: "Strategic planning to keep your audience engaged consistently." },
-            { title: "Performance Matrix & Targeted Ads", desc: "Data-driven advertising that delivers measurable ROI." },
+        social: [
+            { title: "Instagram Marketing", desc: "Grow your following and engagement with visually stunning content strategies." },
+            { title: "Facebook Marketing", desc: "Reach your ideal customers through targeted community building and ads." },
+            { title: "LinkedIn Marketing", desc: "Build professional authority and generate B2B leads effectively." },
+            { title: "Google Business Profile", desc: "Dominate local search and make it easy for customers to find you." }
         ],
-        operations: [
-            { title: "ERPNext Implementation", desc: "Centralize your accounting, HR, and sales into one seamless system." },
-            { title: "Process Automation", desc: "Eliminate manual data entry and reduce human error." },
+        design: [
+            { title: "Private QR Code", desc: "Custom, branded QR solutions for seamless physical-to-digital bridging." },
+            { title: "Graphic Design", desc: "Eye-catching visuals that communicate your message instantly." },
+            { title: "Video Production", desc: "High-quality video content that tells your story and captures attention." },
+            { title: "Photography", desc: "Professional product and lifestyle photography to elevate your brand image." }
+        ],
+        branding: [
+            { title: "Brand Strategy", desc: "Defining your core mission, voice, and positioning in the market." },
+            { title: "Brand Design", desc: "Creating a cohesive visual system that makes your brand unforgettable." },
+            { title: "Logo Design", desc: "Crafting a unique, memorable mark that represents your business identity." },
+            { title: "Brochure Design", desc: "Professional print and digital brochures that drive sales." }
+        ],
+        digital: [
+            { title: "Market Research Strategy", desc: "Data-driven insights to uncover opportunities and outperform competitors." }
         ]
     },
     plan: {
-        heading: "Your Path to Clarity and Growth",
+        heading: "Our 8-Step Process to Success",
         steps: [
-            { number: "01", title: "Schedule a Discovery Call", desc: "We discuss your goals and identify your current bottlenecks." },
-            { number: "02", title: "Get Your Custom Roadmap", desc: "We design a marketing and operations plan tailored to your business." },
-            { number: "03", title: "Watch Your Business Scale", desc: "We execute the plan while you enjoy the results." },
+            { number: "01", title: "Discovery & Alignment", desc: "We call to understand your brand, align on goals, and select the right social platforms." },
+            { number: "02", title: "Profile Optimization", desc: "In the first week, we revamp your profiles to ensure maximum visibility and impact." },
+            { number: "03", title: "Content Strategy Session", desc: "Day 10 meeting to brainstorm and finalize content topics for the next 30 days." },
+            { number: "04", title: "Calendar & Mockups", desc: "We create a content calendar with post mockups, capillaries, and hashtags for your approval." },
+            { number: "05", title: "Schedule & Publish", desc: "Once approved, we handle all the scheduling and publishing across channels." },
+            { number: "06", title: "Bi-Weekly Review", desc: "Every 15 days, we review performance to ensure we remain on the right track." },
+            { number: "07", title: "Monthly Reporting", desc: "Comprehensive reports detailing growth, engagement, and ROI." },
+            { number: "08", title: "Targeted Ad Boosts", desc: "Strategic boosting of high-performing posts to reach a wider audience." },
         ]
     },
     footer: {
         links: [
             { label: "Services", href: "#services" },
-            { label: "About Us", href: "#about" },
+            { label: "Our Process", href: "#process" },
             { label: "Contact", href: "#contact" },
         ]
     }
