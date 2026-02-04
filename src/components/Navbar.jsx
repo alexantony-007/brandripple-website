@@ -5,6 +5,7 @@ import { content } from '../data/content';
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [logoError, setLogoError] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,10 +19,18 @@ const Navbar = () => {
         <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <a href="#" className="flex items-center gap-3 group">
-                    <img src="/logo.png" alt={content.brand.name} className="h-10 w-auto object-contain" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.classList.remove('hidden'); }} />
-                    <span className="hidden text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400">
-                        {content.brand.shortName}
-                    </span>
+                    {!logoError ? (
+                        <img
+                            src="/logo.png"
+                            alt={content.brand.name}
+                            className="h-10 w-auto object-contain"
+                            onError={() => setLogoError(true)}
+                        />
+                    ) : (
+                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400">
+                            {content.brand.shortName}
+                        </span>
+                    )}
                 </a>
 
                 {/* Desktop Menu */}
