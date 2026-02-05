@@ -2,7 +2,7 @@ import React from 'react';
 import { content } from '../data/content';
 import { Instagram, Linkedin, Facebook, Twitter } from 'lucide-react';
 
-const Footer = () => {
+const Footer = ({ onShowLegal }) => {
     return (
         <footer className="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
             <div className="container mx-auto px-6">
@@ -50,8 +50,22 @@ const Footer = () => {
                                     <a href={link.href} className="text-slate-400 hover:text-indigo-400 transition-colors">{link.label}</a>
                                 </li>
                             ))}
-                            <li><a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
-                            <li><a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors">Terms of Service</a></li>
+                            <li>
+                                <button
+                                    onClick={() => onShowLegal('privacy')}
+                                    className="text-slate-400 hover:text-indigo-400 transition-colors text-left"
+                                >
+                                    Privacy Policy
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    onClick={() => onShowLegal('terms')}
+                                    className="text-slate-400 hover:text-indigo-400 transition-colors text-left"
+                                >
+                                    Terms of Service
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 </div>
