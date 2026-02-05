@@ -23,9 +23,30 @@ const Footer = ({ onShowLegal }) => {
                             </a>
                         </div>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-purple-500 transition-all"><Instagram size={20} /></a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-indigo-500 transition-all"><Linkedin size={20} /></a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 transition-all"><Facebook size={20} /></a>
+                            <a
+                                href={content.brand.contact.socials.instagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-purple-500 transition-all"
+                            >
+                                <Instagram size={20} />
+                            </a>
+                            <a
+                                href={content.brand.contact.socials.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-indigo-500 transition-all"
+                            >
+                                <Linkedin size={20} />
+                            </a>
+                            <a
+                                href={content.brand.contact.socials.facebook}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 transition-all"
+                            >
+                                <Facebook size={20} />
+                            </a>
                         </div>
                     </div>
 

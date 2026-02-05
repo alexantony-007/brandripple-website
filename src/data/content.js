@@ -4,7 +4,12 @@ export const content = {
         shortName: "Brandripple",
         contact: {
             phone: "0585927263",
-            email: "info@brandripple.click"
+            email: "info@brandripple.click",
+            socials: {
+                instagram: "https://www.instagram.com/brandrippleuae/",
+                linkedin: "https://www.linkedin.com/company/brandrippleuae",
+                facebook: "https://www.facebook.com/brandrippleuae"
+            }
         }
     },
     hero: {
