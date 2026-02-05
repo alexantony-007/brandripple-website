@@ -9,7 +9,8 @@ export const content = {
                 instagram: "https://www.instagram.com/brandrippleuae/",
                 linkedin: "https://www.linkedin.com/company/brandrippleuae",
                 facebook: "https://www.facebook.com/brandrippleuae",
-                google: "https://share.google/m84zl8BOoOMiT0TMf"
+                google: "https://share.google/m84zl8BOoOMiT0TMf",
+                whatsapp: "https://wa.me/971585927263"
             }
         }
     },

@@ -21,6 +21,9 @@ const Footer = ({ onShowLegal }) => {
                             <a href={`mailto:${content.brand.contact.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
                                 ✉️ {content.brand.contact.email}
                             </a>
+                            <a href={content.brand.contact.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+                                💬 WhatsApp Chat
+                            </a>
                         </div>
                         <div className="flex space-x-4">
                             <a
@@ -54,6 +57,14 @@ const Footer = ({ onShowLegal }) => {
                                 className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-red-500 transition-all"
                             >
                                 <span className="font-bold text-lg">G</span>
+                            </a>
+                            <a
+                                href={content.brand.contact.socials.whatsapp}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-green-500 transition-all"
+                            >
+                                <span className="text-xl">💬</span>
                             </a>
                         </div>
                     </div>

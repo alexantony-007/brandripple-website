@@ -55,6 +55,9 @@ const Contact = () => {
                             <a href={`mailto:${content.brand.contact.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
                                 ✉️ {content.brand.contact.email}
                             </a>
+                            <a href={content.brand.contact.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+                                💬 WhatsApp
+                            </a>
                         </div>
                     </div>
 
