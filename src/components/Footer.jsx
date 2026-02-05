@@ -33,9 +33,6 @@ const Footer = ({ onShowLegal }) => {
                             <a href={`mailto:${content.brand.contact.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
                                 ✉️ {content.brand.contact.email}
                             </a>
-                            <a href={content.brand.contact.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
-                                <WhatsAppIcon size={18} className="text-green-500" /> WhatsApp Chat
-                            </a>
                         </div>
                         <div className="flex space-x-4">
                             <a

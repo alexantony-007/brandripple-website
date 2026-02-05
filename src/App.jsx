@@ -8,6 +8,7 @@ import Blog from './components/Blog';
 import Plan from './components/Plan';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 
 import LegalModal from './components/LegalModal';
 import { legalContent } from './data/legal';
@@ -32,6 +33,8 @@ function App() {
         onClose={() => setActiveLegal(null)}
         content={activeLegal}
       />
+
+      <WhatsAppFloat />
     </div>
   );
 }
