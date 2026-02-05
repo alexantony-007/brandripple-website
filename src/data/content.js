@@ -3,7 +3,7 @@ export const content = {
         name: "Brandripple Operations and Management",
         shortName: "Brandripple",
         contact: {
-            phone: "0585802539",
+            phone: "0585927263",
             email: "info@brandripple.click"
         }
     },
