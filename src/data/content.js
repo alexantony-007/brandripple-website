@@ -10,7 +10,7 @@ export const content = {
                 linkedin: "https://www.linkedin.com/company/brandrippleuae",
                 facebook: "https://www.facebook.com/brandrippleuae",
                 google: "https://share.google/m84zl8BOoOMiT0TMf",
-                whatsapp: "https://wa.me/971585927263?text=i%20found%20your%20website%20i%20wish%20to%20enquire%20about%20your%20services"
+                whatsapp: "https://wa.me/971585927263?text=I%20found%20your%20website.%20I%20wish%20to%20enquire%20about%20your%20services"
             }
         }
     },
