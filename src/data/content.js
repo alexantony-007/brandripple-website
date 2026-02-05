@@ -58,7 +58,9 @@ export const content = {
             { title: "Brochure Design", desc: "Professional print and digital brochures that drive sales." }
         ],
         digital: [
-            { title: "Market Research Strategy", desc: "Data-driven insights to uncover opportunities and outperform competitors." }
+            { title: "Market Research Strategy", desc: "Data-driven insights to uncover opportunities and outperform competitors." },
+            { title: "Website Design & Development", desc: "Crafting modern, high-converting websites optimized for all devices." },
+            { title: "Email Marketing", desc: "Direct-to-inbox strategies that nurture leads and drive repeat business." }
         ]
     },
     plan: {
@@ -87,10 +89,8 @@ export const content = {
         "Facebook & Instagram Ads",
         "Twitter Ads",
         "LinkedIn Ads",
-        "Website Design & Development",
         "Lead Generation Campaigns",
         "Search Engine Optimization",
-        "Email Marketing",
         "Brand Identity",
         "Design Services",
         "Photoshoot",
