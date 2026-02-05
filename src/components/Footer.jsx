@@ -47,6 +47,14 @@ const Footer = ({ onShowLegal }) => {
                             >
                                 <Facebook size={20} />
                             </a>
+                            <a
+                                href={content.brand.contact.socials.google}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-red-500 transition-all"
+                            >
+                                <span className="font-bold text-lg">G</span>
+                            </a>
                         </div>
                     </div>
 

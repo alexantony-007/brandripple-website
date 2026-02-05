@@ -8,7 +8,8 @@ export const content = {
             socials: {
                 instagram: "https://www.instagram.com/brandrippleuae/",
                 linkedin: "https://www.linkedin.com/company/brandrippleuae",
-                facebook: "https://www.facebook.com/brandrippleuae"
+                facebook: "https://www.facebook.com/brandrippleuae",
+                google: "https://share.google/m84zl8BOoOMiT0TMf"
             }
         }
     },
