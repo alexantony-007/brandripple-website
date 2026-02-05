@@ -81,5 +81,19 @@ export const content = {
             { label: "Blog", href: "#blog" },
             { label: "Contact", href: "#contact" },
         ]
-    }
+    },
+    addons: [
+        "Pay Per Click Advertising",
+        "Facebook & Instagram Ads",
+        "Twitter Ads",
+        "LinkedIn Ads",
+        "Website Design & Development",
+        "Lead Generation Campaigns",
+        "Search Engine Optimization",
+        "Email Marketing",
+        "Brand Identity",
+        "Design Services",
+        "Photoshoot",
+        "Media Planning"
+    ]
 };
