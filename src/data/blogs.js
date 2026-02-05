@@ -30,5 +30,21 @@ export const blogs = [
         date: "January 15, 2024",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
         content: "A marketing funnel is the journey a potential customer takes from discovering your brand to making a purchase. It typically consists of Awareness, Interest, Desire, and Action. Social media is the powerhouse at the top of this funnel (Awareness and Interest). It casts a wide net to capture attention through engaging reels, educational carousels, or targeted ads. Once a user engages, you guide them down the funnel—perhaps to your bio link, a newsletter sign-up, or a direct message conversation. This transition turns a 'follower' into a 'lead.' By consistently providing value and social proof, you nurture these leads until they trust you enough to buy. Social media serves as the entry point, pouring fuel into your sales engine and ensuring a constant stream of new opportunities for your business."
+    },
+    {
+        id: 5,
+        title: "Why a Home-Made Video Gets Better Reach Than Stock Footage Video",
+        category: "Video Marketing",
+        date: "February 05, 2024",
+        image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800",
+        content: "In the age of social media, authenticity is the new premium. While stock footage and high-budget studio productions have their place, audiences are increasingly gravitating towards 'home-made' or user-generated content (UGC). Why? Because it feels real. A video filmed on a smartphone by a real person creates an immediate human connection that polished stock videos can't replicate. Algorithms on platforms like TikTok and Instagram Reels prioritize engagement, and engagement comes from trust. Authentic videos signal that there is a real person behind the brand, making your message more relatable and trustworthy. By showing the 'behind-the-scenes' or talking directly to the camera, you lower the barrier between you and your audience, leading to higher watch times, more shares, and ultimately, better organic reach."
+    },
+    {
+        id: 6,
+        title: "A Step-by-Step Guide to Launching Your Brand Strategy",
+        category: "Branding",
+        date: "February 08, 2024",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+        content: "Launching a brand strategy is a marathon, not a sprint. It starts with deep Discovery—understanding your 'Why,' your audience, and your competitors. Next comes Definition: crafting your mission, vision, and core values. This leads to Identity—the visual and verbal expression of your brand (logo, tone of voice, etc.). Once the foundation is laid, you move to Implementation, where you roll out your new brand across all touchpoints, from your website to internal employee training. Finally, there is Management—the ongoing process of monitoring, evolving, and maintaining consistency. A successful strategy doesn't just happen; it is built through careful planning and executed with discipline. This guide walks you through each phase, ensuring your brand doesn't just launch, but truly takes flight in the market."
     }
 ];
