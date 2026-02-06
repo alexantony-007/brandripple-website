@@ -67,7 +67,8 @@ export const content = {
         digital: [
             { title: "Market Research Strategy", desc: "Data-driven insights to uncover opportunities and outperform competitors." },
             { title: "Website Design & Development", desc: "Crafting modern, high-converting websites optimized for all devices." },
-            { title: "Email Marketing", desc: "Direct-to-inbox strategies that nurture leads and drive repeat business." }
+            { title: "Email Marketing", desc: "Direct-to-inbox strategies that nurture leads and drive repeat business." },
+            { title: "ERPNext Implementation", desc: "Streamlining your business operations with powerful, integrated modules." }
         ]
     },
     plan: {
