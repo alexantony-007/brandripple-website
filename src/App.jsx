@@ -9,6 +9,7 @@ import Plan from './components/Plan';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
+import Testimonials from './components/Testimonials';
 
 import LegalModal from './components/LegalModal';
 import { legalContent } from './data/legal';
@@ -23,6 +24,7 @@ function App() {
       <Explanation />
       <Services />
       <Addons />
+      <Testimonials />
       <Plan />
       <Blog />
       <Contact />

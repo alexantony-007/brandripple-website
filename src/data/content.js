@@ -102,5 +102,27 @@ export const content = {
         "Design Services",
         "Photoshoot",
         "Media Planning"
+    ],
+    testimonials: [
+        {
+            name: "Anton Automobile",
+            content: "Brandripple transformed our digital presence. Their strategic approach to social media helped us reach customers we never thought possible. Highly professional and result-oriented team.",
+            role: "Founder"
+        },
+        {
+            name: "Edappully Emporium",
+            content: "The ERPNext implementation was a game-changer for our operations. We've streamlined our inventory and sales, allowing us to focus on growth rather than chaos. Exceptional support!",
+            role: "Managing Director"
+        },
+        {
+            name: "Little Munchkins",
+            content: "Our brand identity feels alive now! The creative team at Brandripple captured our essence perfectly. Our engagement has tripled since the rebranding and new content strategy.",
+            role: "Owner"
+        },
+        {
+            name: "Elite Torque",
+            content: "Expert marketing with real data. Their targeted ads and Google Business optimization put us at the top of local searches. The ROI has been incredible for our service center.",
+            role: "General Manager"
+        }
     ]
 };
