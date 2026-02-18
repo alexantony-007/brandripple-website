@@ -125,5 +125,50 @@ export const content = {
             content: "Expert marketing with real data. Their targeted ads and Google Business optimization put us at the top of local searches. The ROI has been incredible for our service center.",
             role: "General Manager"
         }
+    ],
+    seo: {
+        schema: {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Brandripple Operations and Management",
+            "alternateName": "Brandripple",
+            "url": "https://brandripple.click",
+            "logo": "https://brandripple.click/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+971585927263",
+                "contactType": "customer service",
+                "email": "info@brandripple.click"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Dubai",
+                "addressCountry": "UAE"
+            },
+            "sameAs": [
+                "https://www.instagram.com/brandrippleuae/",
+                "https://www.linkedin.com/company/brandrippleuae",
+                "https://www.facebook.com/brandrippleuae"
+            ],
+            "description": "Brandripple helps businesses scale by combining creative digital marketing (Social, Design, Branding) with robust ERPNext implementation for operational efficiency."
+        }
+    },
+    faq: [
+        {
+            question: "How does Brandripple help businesses grow?",
+            answer: "We use the StoryBrand framework to clarify your message, combined with targeted social media marketing and ERPNext operational streamlining to ensure you can scale efficiently without the chaos."
+        },
+        {
+            question: "What is ERPNext implementation?",
+            answer: "ERPNext is an integrated business management software. We help you implement it to manage accounting, inventory, sales, and HR in one place, replacing disconnected spreadsheets with a single truth."
+        },
+        {
+            question: "Does Brandripple handle social media content creation?",
+            answer: "Yes, we follow a strict 8-step process that includes profile optimization, content strategy sessions, mockups, and monthly reporting across Instagram, Facebook, and LinkedIn."
+        },
+        {
+            question: "Where is Brandripple located?",
+            answer: "Brandripple Operations and Management is based in Dubai, UAE, and provides digital marketing and ERP services globally."
+        }
     ]
 };

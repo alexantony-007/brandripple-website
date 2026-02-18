@@ -10,6 +10,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import Testimonials from './components/Testimonials';
+import SEO from './components/SEO';
+import FAQ from './components/FAQ';
 
 import LegalModal from './components/LegalModal';
 import { legalContent } from './data/legal';
@@ -19,6 +21,7 @@ function App() {
 
   return (
     <div className="bg-slate-950 min-h-screen font-sans selection:bg-purple-500/30 selection:text-purple-200">
+      <SEO />
       <Navbar />
       <Hero />
       <Explanation />
@@ -27,6 +30,7 @@ function App() {
       <Testimonials />
       <Plan />
       <Blog />
+      <FAQ />
       <Contact />
       <Footer onShowLegal={(type) => setActiveLegal(legalContent[type])} />
 
