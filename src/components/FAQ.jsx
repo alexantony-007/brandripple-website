@@ -19,7 +19,7 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="max-w-3xl mx-auto space-y-4">
+                <div className="grid lg:grid-cols-2 gap-6">
                     {content.faq.map((item, index) => (
                         <div
                             key={index}
