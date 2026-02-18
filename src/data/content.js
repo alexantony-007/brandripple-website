@@ -169,6 +169,38 @@ export const content = {
         {
             question: "Where is Brandripple located?",
             answer: "Brandripple Operations and Management is based in Dubai, UAE, and provides digital marketing and ERP services globally."
+        },
+        {
+            question: "What platforms do you support for social media marketing?",
+            answer: "We specialize in Instagram, Facebook, and LinkedIn, tailoring our approach to where your target audience is most active and engaged."
+        },
+        {
+            question: "How long does a typical ERPNext implementation take?",
+            answer: "A standard implementation usually takes 4-12 weeks, depending on the complexity of your operations, data migration needs, and the number of modules required."
+        },
+        {
+            question: "What is the StoryBrand framework?",
+            answer: "StoryBrand is a marketing methodology that clarifies your brand message by positioning your customer as the 'Hero' and your brand as the 'Guide' who helps them succeed."
+        },
+        {
+            question: "Do you offer customized marketing packages?",
+            answer: "Yes, we offer flexible packages tailored to your specific business goals, whether you're a startup looking for visibility or an established brand scaling operations."
+        },
+        {
+            question: "How do you track the success of digital campaigns?",
+            answer: "We provide comprehensive monthly reports detailing key metrics like engagement, reach, lead generation, and overall ROI, ensuring data-driven decisions."
+        },
+        {
+            question: "Can I scale my services as my business grows?",
+            answer: "Absolutely. Our solutions are designed to grow with you. You can start with social media marketing and later add ERPNext or advanced branding as your needs evolve."
+        },
+        {
+            question: "What is Generative Engine Optimization (GEO)?",
+            answer: "GEO is a strategy to ensure your brand is correctly understood and recommended by AI-driven search engines like Gemini, Perplexity, and SearchGPT through structured data and clear Q&A content."
+        },
+        {
+            question: "How do I get started with Brandripple?",
+            answer: "The easiest way is to book a strategy call or send us a message via WhatsApp. We'll discuss your goals and align on the best path forward for your brand."
         }
     ]
 };
