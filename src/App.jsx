@@ -19,6 +19,7 @@ import BrandPage from './components/BrandPage';
 import BioPage from './components/BioPage';
 import Brochure from './components/Brochure';
 import NotFoundPage from './components/NotFoundPage';
+import BackToTop from './components/BackToTop';
 
 function App() {
   const [activeLegal, setActiveLegal] = useState(null);
@@ -72,6 +73,7 @@ function App() {
       />
 
       <WhatsAppFloat />
+      <BackToTop />
     </div>
   );
 }
