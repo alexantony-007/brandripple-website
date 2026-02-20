@@ -292,7 +292,7 @@ export const content = {
             { label: "NAVIGATE TO OUR LOCATION", icon: "map-pin", href: "https://share.google/m84zl8BOoOMiT0TMf", type: "dark" },
             { label: "VISIT OUR WEBSITE", icon: "globe", href: "home", type: "dark" },
             { label: "ADD GOOGLE REVIEWS", icon: "star", href: "https://share.google/m84zl8BOoOMiT0TMf", type: "dark" },
-            { label: "COMPANY BROCHURE", icon: "book-open", href: "#", type: "dark" }
+            { label: "COMPANY BROCHURE", icon: "book-open", href: "brochure", type: "dark" }
         ]
     }
 };

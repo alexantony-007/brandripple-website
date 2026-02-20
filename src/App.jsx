@@ -17,6 +17,8 @@ import LegalModal from './components/LegalModal';
 import { legalContent } from './data/legal';
 import BrandPage from './components/BrandPage';
 import BioPage from './components/BioPage';
+import Brochure from './components/Brochure';
+import NotFoundPage from './components/NotFoundPage';
 
 function App() {
   const [activeLegal, setActiveLegal] = React.useState(null);
@@ -46,7 +48,17 @@ function App() {
       )}
 
       {currentPage === 'brand' && <BrandPage onBack={() => setCurrentPage('home')} />}
-      {currentPage === 'bio' && <BioPage onBack={() => setCurrentPage('home')} />}
+      {currentPage === 'bio' && (
+        <BioPage
+          onBack={() => setCurrentPage('home')}
+          onNavigate={setCurrentPage}
+        />
+      )}
+      {currentPage === 'brochure' && <Brochure onBack={() => setCurrentPage('bio')} />}
+
+      {!['home', 'brand', 'bio', 'brochure'].includes(currentPage) && (
+        <NotFoundPage onHome={() => setCurrentPage('home')} />
+      )}
 
       <Footer
         onShowLegal={(type) => setActiveLegal(legalContent[type])}

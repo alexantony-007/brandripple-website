@@ -16,7 +16,7 @@ import {
     Youtube
 } from 'lucide-react';
 
-const BioPage = ({ onBack }) => {
+const BioPage = ({ onBack, onNavigate }) => {
     const [expandedTeams, setExpandedTeams] = useState({ service: false, backend: false });
 
     // Icon Mapping Helper
@@ -82,6 +82,9 @@ const BioPage = ({ onBack }) => {
                                 if (link.href === 'home') {
                                     e.preventDefault();
                                     onBack();
+                                } else if (onNavigate && (link.href === 'brochure')) {
+                                    e.preventDefault();
+                                    onNavigate(link.href);
                                 }
                             }}
                             className={`flex items-center justify-center gap-3 w-full py-4 rounded-lg font-black text-xs tracking-widest uppercase transition-all transform active:scale-95 ${link.type === 'primary'
@@ -102,7 +105,7 @@ const BioPage = ({ onBack }) => {
                             onClick={() => setExpandedTeams(prev => ({ ...prev, service: !prev.service }))}
                             className="flex items-center justify-between w-full py-4 px-6 rounded-lg bg-slate-900 border border-slate-800/50 text-xs font-black tracking-widest uppercase hover:bg-slate-800 transition-colors"
                         >
-                            <span>Service Team</span>
+                            <span>Consultantant</span>
                             {expandedTeams.service ? <Minus size={16} /> : <Plus size={16} />}
                         </button>
                         {expandedTeams.service && (
