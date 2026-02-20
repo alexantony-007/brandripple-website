@@ -177,13 +177,13 @@ export const content = {
                     "image": "https://brandripple.click/logo.png",
                     "address": {
                         "@type": "PostalAddress",
-                        "addressLocality": "Dubai",
+                        "addressLocality": "Abu Dhabi",
                         "addressCountry": "UAE"
                     },
                     "geo": {
                         "@type": "GeoCoordinates",
-                        "latitude": "25.2048",
-                        "longitude": "55.2708"
+                        "latitude": "24.4539",
+                        "longitude": "54.3773"
                     },
                     "priceRange": "$$",
                     "description": "Premium digital marketing and ERPNext implementation services helping businesses scale through strategic storytelling and operational efficiency."
@@ -286,14 +286,13 @@ export const content = {
             role: "Strategist & Operations Specialist",
             statement: "Our mission is to turn your business into a self-sustaining growth engine."
         },
-        location: "Dubai, UAE",
+        location: "Abu Dhabi, UAE",
         bioLinks: [
             { label: "WHATSAPP US NOW", icon: "whatsapp", href: "https://wa.me/971585927263?text=I%20found%20your%20website.%20I%20wish%20to%20enquire%20about%20your%20services", type: "primary" },
             { label: "NAVIGATE TO OUR LOCATION", icon: "map-pin", href: "https://share.google/m84zl8BOoOMiT0TMf", type: "dark" },
             { label: "VISIT OUR WEBSITE", icon: "globe", href: "home", type: "dark" },
             { label: "ADD GOOGLE REVIEWS", icon: "star", href: "https://share.google/m84zl8BOoOMiT0TMf", type: "dark" },
-            { label: "COMPANY BROCHURE", icon: "book-open", href: "#", type: "dark" },
-            { label: "JOIN OUR COMMUNITY", icon: "users", href: "#", type: "dark" }
+            { label: "COMPANY BROCHURE", icon: "book-open", href: "#", type: "dark" }
         ]
     }
 };

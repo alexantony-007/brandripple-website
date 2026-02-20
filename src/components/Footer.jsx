@@ -112,7 +112,7 @@ const Footer = ({ onShowLegal, onNavigate }) => {
                                     onClick={() => onNavigate('bio')}
                                     className="text-slate-400 hover:text-indigo-400 transition-colors text-left"
                                 >
-                                    Our Story (Bio)
+                                    Bio
                                 </button>
                             </li>
                             <li>

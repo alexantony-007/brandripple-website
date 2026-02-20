@@ -85,10 +85,10 @@ const BioPage = ({ onBack }) => {
                                 }
                             }}
                             className={`flex items-center justify-center gap-3 w-full py-4 rounded-lg font-black text-xs tracking-widest uppercase transition-all transform active:scale-95 ${link.type === 'primary'
-                                    ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg'
-                                    : link.type === 'outline'
-                                        ? 'border border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10'
-                                        : 'bg-slate-900 hover:bg-slate-800 text-white border border-slate-800/50 shadow-sm'
+                                ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg'
+                                : link.type === 'outline'
+                                    ? 'border border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10'
+                                    : 'bg-slate-900 hover:bg-slate-800 text-white border border-slate-800/50 shadow-sm'
                                 }`}
                         >
                             <span className="opacity-80">{getIcon(link.icon)}</span>
@@ -107,20 +107,7 @@ const BioPage = ({ onBack }) => {
                         </button>
                         {expandedTeams.service && (
                             <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg text-sm text-slate-400 animate-in slide-in-from-top-2 duration-300">
-                                Contact our specialized service advisors for expert vehicle consulting.
-                            </div>
-                        )}
-
-                        <button
-                            onClick={() => setExpandedTeams(prev => ({ ...prev, backend: !prev.backend }))}
-                            className="flex items-center justify-between w-full py-4 px-6 rounded-lg bg-slate-900 border border-slate-800/50 text-xs font-black tracking-widest uppercase hover:bg-slate-800 transition-colors"
-                        >
-                            <span>Backend Team</span>
-                            {expandedTeams.backend ? <Minus size={16} /> : <Plus size={16} />}
-                        </button>
-                        {expandedTeams.backend && (
-                            <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg text-sm text-slate-400 animate-in slide-in-from-top-2 duration-300">
-                                Our support and operations team ensuring seamless business flow.
+                                Contact our specialized consultants for expert vehicle consulting.
                             </div>
                         )}
                     </div>
