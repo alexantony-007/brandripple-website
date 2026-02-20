@@ -1,6 +1,6 @@
 import React from 'react';
 import { content } from '../data/content';
-import { ArrowLeft, Type, Palette, Layout } from 'lucide-react';
+import { ArrowLeft, Type, Palette, Layout, Moon, Sun } from 'lucide-react';
 
 const BrandPage = ({ onBack }) => {
     return (
@@ -21,32 +21,65 @@ const BrandPage = ({ onBack }) => {
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-16">
+                <div className="space-y-24">
                     {/* Colors */}
-                    <div className="space-y-8">
-                        <div className="flex items-center gap-3 text-2xl font-bold">
+                    <div className="space-y-12">
+                        <div className="flex items-center gap-3 text-2xl font-bold border-b border-slate-800 pb-4">
                             <Palette className="text-purple-400" />
-                            <h2>Color Palette</h2>
+                            <h2>Color Architecture</h2>
                         </div>
-                        <div className="grid gap-4">
-                            {content.brandGuidelines.colors.map((color, i) => (
-                                <div key={i} className="flex items-center gap-6 p-4 bg-slate-900/50 rounded-2xl border border-slate-800">
-                                    <div
-                                        className={`w-16 h-16 rounded-xl shadow-lg`}
-                                        style={{ backgroundColor: color.hex }}
-                                    ></div>
-                                    <div>
-                                        <div className="font-bold">{color.name}</div>
-                                        <div className="text-sm text-slate-500 font-mono mb-1">{color.hex}</div>
-                                        <div className="text-sm text-slate-400">{color.desc}</div>
-                                    </div>
+
+                        <div className="grid lg:grid-cols-2 gap-12">
+                            {/* Dark Theme */}
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-2 text-slate-400 font-bold uppercase tracking-widest text-xs">
+                                    <Moon size={14} />
+                                    Dark Theme (Default)
                                 </div>
-                            ))}
+                                <div className="grid gap-4">
+                                    {content.brandGuidelines.colors.map((color, i) => (
+                                        <div key={i} className="flex items-center gap-6 p-4 bg-slate-900/50 rounded-2xl border border-slate-800">
+                                            <div
+                                                className={`w-16 h-16 rounded-xl shadow-lg shrink-0`}
+                                                style={{ backgroundColor: color.hex }}
+                                            ></div>
+                                            <div>
+                                                <div className="font-bold">{color.name}</div>
+                                                <div className="text-sm text-slate-500 font-mono mb-1">{color.hex}</div>
+                                                <div className="text-sm text-slate-400">{color.desc}</div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Light Theme */}
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-2 text-slate-400 font-bold uppercase tracking-widest text-xs">
+                                    <Sun size={14} />
+                                    Light Theme
+                                </div>
+                                <div className="grid gap-4">
+                                    {content.brandGuidelines.lightColors.map((color, i) => (
+                                        <div key={i} className="flex items-center gap-6 p-4 bg-white/5 rounded-2xl border border-white/10">
+                                            <div
+                                                className={`w-16 h-16 rounded-xl shadow-lg shrink-0 border border-black/10`}
+                                                style={{ backgroundColor: color.hex }}
+                                            ></div>
+                                            <div>
+                                                <div className="font-bold text-white/90">{color.name}</div>
+                                                <div className="text-sm text-slate-500 font-mono mb-1">{color.hex}</div>
+                                                <div className="text-sm text-slate-400">{color.desc}</div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Typography & Logo */}
-                    <div className="space-y-12">
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        {/* Typography */}
                         <div className="space-y-8">
                             <div className="flex items-center gap-3 text-2xl font-bold">
                                 <Type className="text-indigo-400" />
@@ -72,10 +105,11 @@ const BrandPage = ({ onBack }) => {
                             </div>
                         </div>
 
+                        {/* Logo Details */}
                         <div className="space-y-8">
                             <div className="flex items-center gap-3 text-2xl font-bold">
                                 <Layout className="text-pink-400" />
-                                <h2>Logo Details</h2>
+                                <h2>Logo Strategy</h2>
                             </div>
                             <div className="p-8 bg-slate-900/50 rounded-2xl border border-slate-800">
                                 <div className="grid gap-6">

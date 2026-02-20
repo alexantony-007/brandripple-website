@@ -263,6 +263,12 @@ export const content = {
             { name: "Supportive Pink", hex: "#EC4899", tailwind: "pink-500", desc: "Used sparingly for highlights and specific service categories." },
             { name: "Deep Slate", hex: "#0F172A", tailwind: "slate-900", desc: "The core background color that provides our premium, dark aesthetic." }
         ],
+        lightColors: [
+            { name: "Light Canvas", hex: "#FFFFFF", tailwind: "white", desc: "The primary background for light themed communications." },
+            { name: "Soft Border", hex: "#F1F5F9", tailwind: "slate-100", desc: "Used for subtle dividers and containers in light mode." },
+            { name: "Text Primary", hex: "#0F172A", tailwind: "slate-900", desc: "Ensures high legibility and professional contrast on white." },
+            { name: "Text Muted", hex: "#64748B", tailwind: "slate-500", desc: "Used for non-essential subtext and secondary info." }
+        ],
         typography: {
             family: "Inter",
             provider: "Google Fonts",
