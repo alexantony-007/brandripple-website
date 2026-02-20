@@ -14,12 +14,14 @@ import {
     Layout,
     Database,
     ChevronLeft,
-    ChevronRight
+    ChevronRight,
+    TrendingUp,
+    Anchor
 } from 'lucide-react';
 
 const Brochure = ({ onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalPages = 10;
+    const totalPages = 12;
 
     const nextSlide = () => {
         if (currentIndex < totalPages - 1) {
@@ -341,7 +343,66 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 10: CALL TO ACTION */}
+                {/* PAGE 10: THE RIPPLE EFFECT (NEW) */}
+                <Page className="bg-slate-950">
+                    <div className="max-w-4xl mx-auto py-20 flex flex-col items-center text-center">
+                        <TrendingUp size={64} className="text-indigo-500 mb-8" />
+                        <span className="text-indigo-500 font-black uppercase tracking-[0.2em] mb-4 block">05. The Ripple Effect</span>
+                        <h2 className="text-5xl font-black mb-8 leading-tight">Scale Without <span className="text-indigo-400">Limits.</span></h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full mt-8">
+                            <div className="space-y-4">
+                                <div className="text-4xl font-black text-white">Global</div>
+                                <p className="text-slate-500 text-sm uppercase font-bold tracking-widest">Reach Optimization</p>
+                            </div>
+                            <div className="space-y-4">
+                                <div className="text-4xl font-black text-white">24/7</div>
+                                <p className="text-slate-500 text-sm uppercase font-bold tracking-widest">Operational Sync</p>
+                            </div>
+                            <div className="space-y-4">
+                                <div className="text-4xl font-black text-white">Data</div>
+                                <p className="text-slate-500 text-sm uppercase font-bold tracking-widest">Driven Decisions</p>
+                            </div>
+                        </div>
+                        <p className="mt-16 text-xl text-slate-400 leading-relaxed max-w-2xl">
+                            Our methodology ensures that every dollar spent on marketing creates a compounding effect on your operational efficiency.
+                        </p>
+                    </div>
+                </Page>
+
+                {/* PAGE 11: OUR MISSION (NEW) */}
+                <Page className="bg-black">
+                    <div className="max-w-4xl mx-auto py-20">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center h-full">
+                            <div className="p-12 bg-indigo-600 rounded-3xl shadow-2xl relative overflow-hidden group">
+                                <Anchor size={200} className="absolute -bottom-10 -right-10 text-indigo-500/20 rotate-12 group-hover:rotate-0 transition-transform duration-700" />
+                                <h3 className="text-3xl font-black mb-6 relative z-10">Our Anchor.</h3>
+                                <p className="text-indigo-100 text-lg relative z-10 leading-relaxed">
+                                    We don't just provide services; we build the infrastructure for your legacy. Integration is our obsession.
+                                </p>
+                            </div>
+                            <div>
+                                <span className="text-slate-500 font-black uppercase tracking-[0.2em] mb-4 block">Our Commitment</span>
+                                <h2 className="text-4xl font-black mb-8">Transparency, <br /><span className="text-indigo-500">Scale,</span> & Legacy.</h2>
+                                <div className="space-y-6">
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-2 h-2 rounded-full bg-indigo-500 mt-2"></div>
+                                        <p className="text-slate-400 text-sm">Real-time reporting across all platforms.</p>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-2 h-2 rounded-full bg-indigo-500 mt-2"></div>
+                                        <p className="text-slate-400 text-sm">Ownership of all digital assets and accounts.</p>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-2 h-2 rounded-full bg-indigo-500 mt-2"></div>
+                                        <p className="text-slate-400 text-sm">Direct access to lead strategists.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Page>
+
+                {/* PAGE 12: CALL TO ACTION */}
                 <Page className="bg-slate-950 justify-center items-center text-center">
                     <div className="max-w-2xl px-6">
                         <img src="/logo.png" alt="Logo" className="w-24 mb-12 mx-auto" />
