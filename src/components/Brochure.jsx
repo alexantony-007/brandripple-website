@@ -138,7 +138,7 @@ const Brochure = ({ onBack }) => {
                 </Page>
 
                 {/* PAGE 3: THE GUIDE */}
-                <Page className="bg-black">
+                <Page className="bg-black justify-center">
                     <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-16 py-20">
                         <div className="flex-1">
                             <span className="text-indigo-500 font-black uppercase tracking-[0.2em] mb-4 block">02. The Guide</span>
@@ -170,7 +170,7 @@ const Brochure = ({ onBack }) => {
                 </Page>
 
                 {/* PAGE 4: SERVICES OVERVIEW */}
-                <Page className="bg-slate-950">
+                <Page className="bg-slate-950 justify-center">
                     <div className="max-w-5xl mx-auto py-20 text-center">
                         <span className="text-purple-500 font-black uppercase tracking-[0.2em] mb-4 block">03. What We Do</span>
                         <h2 className="text-5xl font-black mb-16">Full-Spectrum <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Solutions</span></h2>
@@ -191,7 +191,7 @@ const Brochure = ({ onBack }) => {
                 </Page>
 
                 {/* PAGE 5: SOCIAL SPOTLIGHT */}
-                <Page className="bg-slate-950">
+                <Page className="bg-slate-950 justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="flex items-center gap-4 mb-8">
                             <div className="w-12 h-12 bg-pink-600/20 text-pink-500 rounded-xl flex items-center justify-center">
@@ -238,7 +238,7 @@ const Brochure = ({ onBack }) => {
                 </Page>
 
                 {/* PAGE 6: DESIGN SPOTLIGHT */}
-                <Page className="bg-black">
+                <Page className="bg-black justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="flex items-center gap-4 mb-12">
                             <div className="w-12 h-12 bg-purple-600/20 text-purple-500 rounded-xl flex items-center justify-center">
@@ -266,7 +266,7 @@ const Brochure = ({ onBack }) => {
                 </Page>
 
                 {/* PAGE 7: ERPNEXT SPOTLIGHT */}
-                <Page className="bg-slate-950">
+                <Page className="bg-slate-950 justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                             <div>
@@ -370,7 +370,7 @@ const Brochure = ({ onBack }) => {
                 </Page>
 
                 {/* PAGE 11: OUR MISSION (NEW) */}
-                <Page className="bg-black">
+                <Page className="bg-black justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center h-full">
                             <div className="p-12 bg-indigo-600 rounded-3xl shadow-2xl relative overflow-hidden group">
