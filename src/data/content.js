@@ -232,6 +232,15 @@ export const content = {
             name: "Founder",
             role: "Strategist & Operations Specialist",
             statement: "Our mission is to turn your business into a self-sustaining growth engine."
-        }
+        },
+        location: "Dubai, UAE",
+        bioLinks: [
+            { label: "WHATSAPP US NOW", icon: "whatsapp", href: "https://wa.me/971585927263?text=I%20found%20your%20website.%20I%20wish%20to%20enquire%20about%20your%20services", type: "primary" },
+            { label: "NAVIGATE TO OUR LOCATION", icon: "map-pin", href: "https://share.google/m84zl8BOoOMiT0TMf", type: "dark" },
+            { label: "VISIT OUR WEBSITE", icon: "globe", href: "home", type: "dark" },
+            { label: "ADD GOOGLE REVIEWS", icon: "star", href: "https://share.google/m84zl8BOoOMiT0TMf", type: "dark" },
+            { label: "COMPANY BROCHURE", icon: "book-open", href: "#", type: "dark" },
+            { label: "JOIN OUR COMMUNITY", icon: "users", href: "#", type: "dark" }
+        ]
     }
 };

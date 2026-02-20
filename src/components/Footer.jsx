@@ -14,7 +14,7 @@ const WhatsAppIcon = ({ size = 20, className = "" }) => (
     </svg>
 );
 
-const Footer = ({ onShowLegal }) => {
+const Footer = ({ onShowLegal, onNavigate }) => {
     return (
         <footer className="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
             <div className="container mx-auto px-6">
@@ -99,6 +99,22 @@ const Footer = ({ onShowLegal }) => {
                                     <a href={link.href} className="text-slate-400 hover:text-indigo-400 transition-colors">{link.label}</a>
                                 </li>
                             ))}
+                            <li>
+                                <button
+                                    onClick={() => onNavigate('brand')}
+                                    className="text-slate-400 hover:text-indigo-400 transition-colors text-left"
+                                >
+                                    Brand Guidelines
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    onClick={() => onNavigate('bio')}
+                                    className="text-slate-400 hover:text-indigo-400 transition-colors text-left"
+                                >
+                                    Our Story (Bio)
+                                </button>
+                            </li>
                             <li>
                                 <button
                                     onClick={() => onShowLegal('privacy')}

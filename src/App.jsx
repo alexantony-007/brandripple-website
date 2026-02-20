@@ -48,7 +48,10 @@ function App() {
       {currentPage === 'brand' && <BrandPage onBack={() => setCurrentPage('home')} />}
       {currentPage === 'bio' && <BioPage onBack={() => setCurrentPage('home')} />}
 
-      <Footer onShowLegal={(type) => setActiveLegal(legalContent[type])} />
+      <Footer
+        onShowLegal={(type) => setActiveLegal(legalContent[type])}
+        onNavigate={setCurrentPage}
+      />
 
       <LegalModal
         isOpen={!!activeLegal}

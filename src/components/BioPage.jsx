@@ -1,74 +1,135 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { content } from '../data/content';
-import { ArrowLeft, Quote, MapPin, Target } from 'lucide-react';
+import {
+    ArrowLeft,
+    MessageCircle,
+    MapPin,
+    Globe,
+    Star,
+    BookOpen,
+    Users,
+    Plus,
+    Minus,
+    Instagram,
+    Linkedin,
+    Facebook,
+    Youtube
+} from 'lucide-react';
 
 const BioPage = ({ onBack }) => {
+    const [expandedTeams, setExpandedTeams] = useState({ service: false, backend: false });
+
+    // Icon Mapping Helper
+    const getIcon = (iconName) => {
+        switch (iconName) {
+            case 'whatsapp': return <MessageCircle size={20} />;
+            case 'map-pin': return <MapPin size={20} />;
+            case 'globe': return <Globe size={20} />;
+            case 'star': return <Star size={20} />;
+            case 'book-open': return <BookOpen size={20} />;
+            case 'users': return <Users size={20} />;
+            default: return <Plus size={20} />;
+        }
+    };
+
     return (
-        <div className="min-h-screen bg-slate-950 text-white py-20 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="container mx-auto px-6">
+        <div className="min-h-screen bg-black text-white py-12 px-6 flex flex-col items-center animate-in fade-in duration-700 font-sans">
+            {/* Back Button */}
+            <div className="w-full max-w-md mb-8">
                 <button
                     onClick={onBack}
-                    className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-12 group"
+                    className="flex items-center gap-2 text-slate-500 hover:text-white transition-colors group"
                 >
-                    <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-                    Back to Home
+                    <ArrowLeft size={18} />
+                    <span className="text-sm font-medium">Back to Home</span>
                 </button>
+            </div>
 
-                <div className="max-w-4xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-                        <div>
-                            <h1 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">
-                                {content.about.title}
-                            </h1>
-                            <div className="space-y-6 text-xl text-slate-400 leading-relaxed font-light">
-                                {content.about.bio.split('. ').map((para, i) => (
-                                    <p key={i}>{para}.</p>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="aspect-square rounded-3xl bg-gradient-to-br from-purple-600/20 to-indigo-600/20 border border-slate-700/50 flex items-center justify-center relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
-                                <div className="z-10 text-center p-8">
-                                    <div className="w-20 h-20 rounded-full bg-purple-500/20 flex items-center justify-center mx-auto mb-6 text-purple-400">
-                                        <Quote size={40} fill="currentColor" fillOpacity={0.1} />
-                                    </div>
-                                    <p className="text-2xl font-bold italic text-white mb-4">
-                                        "{content.about.founder.statement}"
-                                    </p>
-                                    <div className="text-indigo-400 font-medium">{content.about.founder.name}</div>
-                                    <div className="text-sm text-slate-500">{content.about.founder.role}</div>
-                                </div>
-                                {/* Decorative ripple animation */}
-                                <div className="absolute inset-0 pointer-events-none">
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-purple-500/10 rounded-full animate-ping"></div>
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 border border-indigo-500/10 rounded-full animate-ping animation-delay-2000"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            {/* Profile Info */}
+            <div className="w-full max-w-md text-center mb-10">
+                <div className="mb-6 flex justify-center">
+                    <img
+                        src="/logo.png"
+                        alt={content.brand.name}
+                        className="h-16 w-auto object-contain"
+                        onError={(e) => {
+                            e.target.style.display = 'none';
+                        }}
+                    />
+                </div>
+                <h1 className="text-lg font-bold uppercase tracking-wider mb-2">{content.brand.name}</h1>
+                <p className="text-slate-400 text-sm mb-6">{content.about.location}</p>
+                <p className="text-slate-300 text-sm leading-relaxed mb-8 px-4">
+                    {content.about.bio}
+                </p>
 
-                    <div className="grid sm:grid-cols-2 gap-8 pt-12 border-t border-slate-800">
-                        <div className="flex items-start gap-4 p-6 bg-slate-900/30 rounded-2xl border border-slate-800/50">
-                            <div className="p-3 bg-purple-500/10 rounded-xl text-purple-400">
-                                <MapPin size={24} />
+                {/* Social Icons */}
+                <div className="flex justify-center gap-6 mb-12">
+                    <a href={content.brand.contact.socials.facebook} className="text-slate-400 hover:text-white transition-colors"><Facebook size={22} /></a>
+                    <a href={content.brand.contact.socials.instagram} className="text-slate-400 hover:text-white transition-colors"><Instagram size={22} /></a>
+                    <a href={content.brand.contact.socials.linkedin} className="text-slate-400 hover:text-white transition-colors"><Linkedin size={22} /></a>
+                </div>
+
+                <h2 className="text-base font-black uppercase tracking-widest mb-6">Quick Links</h2>
+
+                {/* Vertical Button Stack */}
+                <div className="space-y-4">
+                    {content.about.bioLinks.map((link, i) => (
+                        <a
+                            key={i}
+                            href={link.href === 'home' ? '#' : link.href}
+                            onClick={(e) => {
+                                if (link.href === 'home') {
+                                    e.preventDefault();
+                                    onBack();
+                                }
+                            }}
+                            className={`flex items-center justify-center gap-3 w-full py-4 rounded-lg font-black text-xs tracking-widest uppercase transition-all transform active:scale-95 ${link.type === 'primary'
+                                    ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg'
+                                    : link.type === 'outline'
+                                        ? 'border border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10'
+                                        : 'bg-slate-900 hover:bg-slate-800 text-white border border-slate-800/50 shadow-sm'
+                                }`}
+                        >
+                            <span className="opacity-80">{getIcon(link.icon)}</span>
+                            {link.label}
+                        </a>
+                    ))}
+
+                    {/* Team Expandables (Matching requested style) */}
+                    <div className="space-y-4">
+                        <button
+                            onClick={() => setExpandedTeams(prev => ({ ...prev, service: !prev.service }))}
+                            className="flex items-center justify-between w-full py-4 px-6 rounded-lg bg-slate-900 border border-slate-800/50 text-xs font-black tracking-widest uppercase hover:bg-slate-800 transition-colors"
+                        >
+                            <span>Service Team</span>
+                            {expandedTeams.service ? <Minus size={16} /> : <Plus size={16} />}
+                        </button>
+                        {expandedTeams.service && (
+                            <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg text-sm text-slate-400 animate-in slide-in-from-top-2 duration-300">
+                                Contact our specialized service advisors for expert vehicle consulting.
                             </div>
-                            <div>
-                                <h3 className="font-bold text-white mb-1">Our Base</h3>
-                                <p className="text-slate-400">Strategically located in Dubai, serving growth-minded businesses locally and abroad.</p>
+                        )}
+
+                        <button
+                            onClick={() => setExpandedTeams(prev => ({ ...prev, backend: !prev.backend }))}
+                            className="flex items-center justify-between w-full py-4 px-6 rounded-lg bg-slate-900 border border-slate-800/50 text-xs font-black tracking-widest uppercase hover:bg-slate-800 transition-colors"
+                        >
+                            <span>Backend Team</span>
+                            {expandedTeams.backend ? <Minus size={16} /> : <Plus size={16} />}
+                        </button>
+                        {expandedTeams.backend && (
+                            <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg text-sm text-slate-400 animate-in slide-in-from-top-2 duration-300">
+                                Our support and operations team ensuring seamless business flow.
                             </div>
-                        </div>
-                        <div className="flex items-start gap-4 p-6 bg-slate-900/30 rounded-2xl border border-slate-800/50">
-                            <div className="p-3 bg-indigo-500/10 rounded-xl text-indigo-400">
-                                <Target size={24} />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-white mb-1">Our Focus</h3>
-                                <p className="text-slate-400">Creating high-impact "Ripples" through precision marketing and efficient systems.</p>
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="mt-12 text-[10px] text-slate-600 uppercase tracking-widest font-bold">
+                &copy; {new Date().getFullYear()} {content.brand.name}
             </div>
         </div>
     );
