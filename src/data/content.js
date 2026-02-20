@@ -127,30 +127,83 @@ export const content = {
         }
     ],
     seo: {
+        meta: {
+            title: "Brandripple - Digital Growth & ERPNext Solutions in Dubai",
+            description: "Transform your business with Brandripple. We combine high-impact digital marketing, strategic branding, and ERPNext implementation to streamline operations and drive growth.",
+            keywords: "Digital Marketing Dubai, ERPNext Implementation UAE, Brand Strategy, Social Media Management, Business Automation, StoryBrand Marketing",
+            ogImage: "https://brandripple.click/og-image.png",
+            twitterHandle: "@brandrippleuae"
+        },
         schema: {
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Brandripple Operations and Management",
-            "alternateName": "Brandripple",
-            "url": "https://brandripple.click",
-            "logo": "https://brandripple.click/logo.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+971585927263",
-                "contactType": "customer service",
-                "email": "info@brandripple.click"
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dubai",
-                "addressCountry": "UAE"
-            },
-            "sameAs": [
-                "https://www.instagram.com/brandrippleuae/",
-                "https://www.linkedin.com/company/brandrippleuae",
-                "https://www.facebook.com/brandrippleuae"
-            ],
-            "description": "Brandripple helps businesses scale by combining creative digital marketing (Social, Design, Branding) with robust ERPNext implementation for operational efficiency."
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://brandripple.click/#organization",
+                    "name": "Brandripple Operations and Management",
+                    "url": "https://brandripple.click",
+                    "logo": "https://brandripple.click/logo.png",
+                    "sameAs": [
+                        "https://www.instagram.com/brandrippleuae/",
+                        "https://www.linkedin.com/company/brandrippleuae",
+                        "https://www.facebook.com/brandrippleuae"
+                    ],
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "telephone": "+971585927263",
+                        "contactType": "customer service",
+                        "email": "info@brandripple.click",
+                        "areaServed": "Global",
+                        "availableLanguage": ["English", "Arabic"]
+                    }
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://brandripple.click/#website",
+                    "url": "https://brandripple.click",
+                    "name": "Brandripple",
+                    "publisher": { "@id": "https://brandripple.click/#organization" },
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": "https://brandripple.click/?s={search_term_string}",
+                        "query-input": "required name=search_term_string"
+                    }
+                },
+                {
+                    "@type": "ProfessionalService",
+                    "@id": "https://brandripple.click/#localbusiness",
+                    "name": "Brandripple Operations and Management",
+                    "url": "https://brandripple.click",
+                    "image": "https://brandripple.click/logo.png",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Dubai",
+                        "addressCountry": "UAE"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "25.2048",
+                        "longitude": "55.2708"
+                    },
+                    "priceRange": "$$",
+                    "description": "Premium digital marketing and ERPNext implementation services helping businesses scale through strategic storytelling and operational efficiency."
+                },
+                {
+                    "@type": "Service",
+                    "name": "Social Media Marketing",
+                    "provider": { "@id": "https://brandripple.click/#organization" },
+                    "serviceType": "Marketing",
+                    "areaServed": "Global",
+                    "description": "Strategic social media management across Instagram, Facebook, and LinkedIn."
+                },
+                {
+                    "@type": "Service",
+                    "name": "ERPNext Implementation",
+                    "provider": { "@id": "https://brandripple.click/#organization" },
+                    "serviceType": "Business Operations",
+                    "description": "Seamless integration of ERPNext modules to streamline inventory, sales, and accounting."
+                }
+            ]
         }
     },
     faq: [
