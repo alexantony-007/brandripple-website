@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { content } from '../data/content';
 import {
     ArrowLeft,
-    Download,
     CheckCircle2,
     ArrowRight,
     Zap,
@@ -18,7 +17,7 @@ import {
     ChevronRight
 } from 'lucide-react';
 
-const Brochure = ({ onNavigate }) => {
+const Brochure = ({ onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalPages = 10;
 
@@ -67,14 +66,6 @@ const Brochure = ({ onNavigate }) => {
                         <span className="opacity-30">/</span>
                         <span>{totalPages}</span>
                     </div>
-
-                    <button
-                        onClick={handlePrint}
-                        className="flex items-center gap-2 px-4 py-2 bg-indigo-600 rounded-full hover:bg-indigo-500 transition-all font-bold text-sm shadow-lg shadow-indigo-900/40"
-                    >
-                        <Download size={18} />
-                        Download PDF
-                    </button>
                 </div>
             </div>
 
