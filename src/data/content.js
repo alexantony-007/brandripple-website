@@ -202,5 +202,36 @@ export const content = {
             question: "How do I get started with Brandripple?",
             answer: "The easiest way is to book a strategy call or send us a message via WhatsApp. We'll discuss your goals and align on the best path forward for your brand."
         }
-    ]
+    ],
+    brandGuidelines: {
+        colors: [
+            { name: "Primary Purple", hex: "#A855F7", tailwind: "purple-500", desc: "Our main accent color, used for gradients and primary CTAs." },
+            { name: "Brand Indigo", hex: "#6366F1", tailwind: "indigo-500", desc: "Used in combination with purple to create our signature depth." },
+            { name: "Supportive Pink", hex: "#EC4899", tailwind: "pink-500", desc: "Used sparingly for highlights and specific service categories." },
+            { name: "Deep Slate", hex: "#0F172A", tailwind: "slate-900", desc: "The core background color that provides our premium, dark aesthetic." }
+        ],
+        typography: {
+            family: "Inter",
+            provider: "Google Fonts",
+            specimens: [
+                { weight: "800 (Extrabold)", usage: "Main Headlines", style: "tracking-tight" },
+                { weight: "600 (Semibold)", usage: "Subheadings & Navigation", style: "" },
+                { weight: "400 (Regular)", usage: "Body Copy & Descriptions", style: "leading-relaxed" }
+            ]
+        },
+        logo: {
+            concept: "The 'Ripple' effect",
+            elements: "Minimalist typography combined with a wave/ripple icon representing the impact of strategic marketing.",
+            usage: "Always used with sufficient padding. On dark backgrounds, the white/transparent version is preferred."
+        }
+    },
+    about: {
+        title: "The Story Behind the Ripple",
+        bio: "Brandripple Operations and Management was born from a simple realization: digital marketing alone isn't enough. Businesses need a bridge between their online presence and their internal operations. By fusing the StoryBrand framework with the power of ERPNext, we help organizations not just get found, but stay organized as they scale. Based in Dubai, we serve a global clientele of forward-thinking brands who are ready to move beyond the chaos.",
+        founder: {
+            name: "Founder",
+            role: "Strategist & Operations Specialist",
+            statement: "Our mission is to turn your business into a self-sustaining growth engine."
+        }
+    }
 };

@@ -15,23 +15,39 @@ import FAQ from './components/FAQ';
 
 import LegalModal from './components/LegalModal';
 import { legalContent } from './data/legal';
+import BrandPage from './components/BrandPage';
+import BioPage from './components/BioPage';
 
 function App() {
   const [activeLegal, setActiveLegal] = React.useState(null);
+  const [currentPage, setCurrentPage] = React.useState('home');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
   return (
     <div className="bg-slate-950 min-h-screen font-sans selection:bg-purple-500/30 selection:text-purple-200">
       <SEO />
-      <Navbar />
-      <Hero />
-      <Explanation />
-      <Services />
-      <Addons />
-      <Testimonials />
-      <Plan />
-      <Blog />
-      <FAQ />
-      <Contact />
+      <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
+
+      {currentPage === 'home' && (
+        <>
+          <Hero />
+          <Explanation />
+          <Services />
+          <Addons />
+          <Testimonials />
+          <Plan />
+          <Blog />
+          <FAQ />
+          <Contact />
+        </>
+      )}
+
+      {currentPage === 'brand' && <BrandPage onBack={() => setCurrentPage('home')} />}
+      {currentPage === 'bio' && <BioPage onBack={() => setCurrentPage('home')} />}
+
       <Footer onShowLegal={(type) => setActiveLegal(legalContent[type])} />
 
       <LegalModal
