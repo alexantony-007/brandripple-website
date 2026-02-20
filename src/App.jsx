@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Explanation from './components/Explanation';
@@ -21,8 +21,8 @@ import Brochure from './components/Brochure';
 import NotFoundPage from './components/NotFoundPage';
 
 function App() {
-  const [activeLegal, setActiveLegal] = React.useState(null);
-  const [currentPage, setCurrentPage] = React.useState('home');
+  const [activeLegal, setActiveLegal] = useState(null);
+  const [currentPage, setCurrentPage] = useState('home');
 
   useEffect(() => {
     window.scrollTo(0, 0);
