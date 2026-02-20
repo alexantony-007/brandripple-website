@@ -18,13 +18,9 @@ import {
     ChevronRight
 } from 'lucide-react';
 
-const Brochure = ({ onBack }) => {
+const Brochure = ({ onNavigate }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalPages = 10;
-
-    const handlePrint = () => {
-        window.print();
-    };
 
     const nextSlide = () => {
         if (currentIndex < totalPages - 1) {
