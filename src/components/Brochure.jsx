@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { content } from '../data/content';
 import {
     ArrowLeft,
@@ -13,22 +13,48 @@ import {
     Globe,
     Monitor,
     Layout,
-    Database
+    Database,
+    ChevronLeft,
+    ChevronRight
 } from 'lucide-react';
 
 const Brochure = ({ onBack }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const totalPages = 10;
+
     const handlePrint = () => {
         window.print();
     };
 
+    const nextSlide = () => {
+        if (currentIndex < totalPages - 1) {
+            setCurrentIndex(prev => prev + 1);
+        }
+    };
+
+    const prevSlide = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(prev => prev - 1);
+        }
+    };
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [currentIndex]);
+
     const Page = ({ children, className = "" }) => (
-        <section className={`w-full min-h-screen flex flex-col p-12 relative overflow-hidden print:p-8 print:min-h-[1100px] ${className}`}>
+        <section className={`w-screen h-screen flex-shrink-0 flex flex-col p-12 relative overflow-hidden print:w-full print:h-auto print:min-h-[1100px] print:p-8 print:block ${className}`}>
             {children}
         </section>
     );
 
     return (
-        <div className="bg-slate-950 text-white font-sans selection:bg-purple-500/30">
+        <div className="bg-slate-950 text-white font-sans selection:bg-purple-500/30 overflow-hidden h-screen print:h-auto print:overflow-visible">
             {/* Control Bar (Hidden on Print) */}
             <div className="fixed top-0 left-0 w-full z-50 p-4 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 flex justify-between items-center print:hidden">
                 <button
@@ -38,16 +64,51 @@ const Brochure = ({ onBack }) => {
                     <ArrowLeft size={18} />
                     <span>Back to Bio</span>
                 </button>
-                <button
-                    onClick={handlePrint}
-                    className="flex items-center gap-2 px-4 py-2 bg-indigo-600 rounded-full hover:bg-indigo-500 transition-all font-bold text-sm shadow-lg shadow-indigo-900/40"
-                >
-                    <Download size={18} />
-                    Download PDF
-                </button>
+
+                <div className="flex items-center gap-6">
+                    <div className="hidden sm:flex items-center gap-2 bg-slate-950/50 px-4 py-1.5 rounded-full border border-slate-800 text-[10px] font-black uppercase tracking-widest text-slate-500">
+                        <span className="text-white">{String(currentIndex + 1).padStart(2, '0')}</span>
+                        <span className="opacity-30">/</span>
+                        <span>{totalPages}</span>
+                    </div>
+
+                    <button
+                        onClick={handlePrint}
+                        className="flex items-center gap-2 px-4 py-2 bg-indigo-600 rounded-full hover:bg-indigo-500 transition-all font-bold text-sm shadow-lg shadow-indigo-900/40"
+                    >
+                        <Download size={18} />
+                        Download PDF
+                    </button>
+                </div>
             </div>
 
-            <div className="pt-20 print:pt-0">
+            {/* Navigation Arrows (Desktop) */}
+            <div className="fixed inset-y-0 left-0 w-20 flex items-center justify-center z-40 print:hidden pointer-events-none">
+                {currentIndex > 0 && (
+                    <button
+                        onClick={prevSlide}
+                        className="w-12 h-12 rounded-full bg-slate-900/50 backdrop-blur-md border border-slate-800 flex items-center justify-center text-white hover:bg-indigo-600 transition-all pointer-events-auto"
+                    >
+                        <ChevronLeft size={24} />
+                    </button>
+                )}
+            </div>
+            <div className="fixed inset-y-0 right-0 w-20 flex items-center justify-center z-40 print:hidden pointer-events-none">
+                {currentIndex < totalPages - 1 && (
+                    <button
+                        onClick={nextSlide}
+                        className="w-12 h-12 rounded-full bg-slate-900/50 backdrop-blur-md border border-slate-800 flex items-center justify-center text-white hover:bg-indigo-600 transition-all pointer-events-auto"
+                    >
+                        <ChevronRight size={24} />
+                    </button>
+                )}
+            </div>
+
+            {/* Main Slider Container */}
+            <div
+                className="flex transition-transform duration-700 ease-in-out h-full print:flex-col print:transition-none print:transform-none"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
                 {/* PAGE 1: COVER */}
                 <Page className="justify-center items-center text-center bg-gradient-to-br from-slate-950 via-indigo-950/20 to-slate-950">
                     <div className="absolute top-20 left-1/2 -translate-x-1/2 opacity-20 blur-3xl w-96 h-96 bg-purple-600 rounded-full"></div>
@@ -316,6 +377,16 @@ const Brochure = ({ onBack }) => {
                         </div>
                     </div>
                 </Page>
+            </div>
+
+            {/* Dots Indicator (Mobile) */}
+            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-50 print:hidden sm:hidden">
+                {[...Array(totalPages)].map((_, i) => (
+                    <div
+                        key={i}
+                        className={`w-2 h-2 rounded-full transition-all ${currentIndex === i ? 'bg-indigo-500 w-4' : 'bg-slate-700'}`}
+                    />
+                ))}
             </div>
         </div>
     );
