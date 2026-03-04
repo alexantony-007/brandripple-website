@@ -39,6 +39,7 @@ const ComparisonTable = () => {
                             <div className="mb-6">
                                 <div className="text-xs font-black uppercase tracking-[.2em] text-slate-500 mb-2">{tier.level}</div>
                                 <h3 className="text-2xl font-black text-white uppercase italic">{tier.name}</h3>
+                                <div className="text-sm font-bold text-indigo-400 mt-2 bg-indigo-500/10 px-3 py-1.5 rounded-lg inline-block">{tier.price}</div>
                             </div>
 
                             <div className="space-y-4">
