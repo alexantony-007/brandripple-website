@@ -1,16 +1,30 @@
 import React from 'react';
-import { Zap, Layout, Camera, Search, PenTool, Share2, Layers, BarChart3, ChevronRight } from 'lucide-react';
+import {
+    Zap,
+    Layout,
+    Camera,
+    Search,
+    PenTool,
+    Share2,
+    Layers,
+    BarChart3,
+    ChevronRight,
+    Bot,
+    Workflow,
+    Cpu
+} from 'lucide-react';
 import { content } from '../data/content';
+import ComparisonTable from './ComparisonTable';
 
 const Services = () => {
     // Helper to render a category column
     const renderCategory = (title, items, icon, colorClass, borderClass) => (
-        <div className={`bg-slate-800/40 backdrop-blur-sm p-8 rounded-3xl border border-slate-700/50 transition-all hover:-translate-y-1 hover:shadow-xl ${borderClass}`}>
+        <div className={`bg-slate-800/40 backdrop-blur-sm p-8 rounded-3xl border border-slate-700/50 transition-all hover:-translate-y-1 hover:shadow-xl ${borderClass} flex flex-col h-full`}>
             <h3 className={`text-2xl font-bold text-white mb-8 flex items-center gap-3`}>
                 <span className={`p-2 rounded-lg bg-slate-800 border border-slate-700 ${colorClass}`}>{icon}</span>
                 {title}
             </h3>
-            <div className="space-y-8">
+            <div className="space-y-8 flex-grow">
                 {items.map((service, i) => (
                     <div key={i} className="group/item">
                         <h4 className="font-bold text-lg text-white mb-2 flex items-center gap-2 group-hover/item:text-purple-400 transition-colors">
@@ -36,7 +50,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-24">
                     {renderCategory(
                         "SOCIAL",
                         content.services.social,
@@ -65,7 +79,17 @@ const Services = () => {
                         "text-blue-400",
                         "hover:border-blue-500/30 hover:shadow-blue-900/10"
                     )}
+                    {renderCategory(
+                        "AUTOMATION",
+                        content.services.aiAutomation,
+                        <Bot size={24} />,
+                        "text-emerald-400",
+                        "hover:border-emerald-500/30 hover:shadow-emerald-900/10"
+                    )}
                 </div>
+
+                {/* AI / Local Visibility Comparison */}
+                <ComparisonTable />
             </div>
         </section>
     );

@@ -16,12 +16,16 @@ import {
     ChevronLeft,
     ChevronRight,
     TrendingUp,
-    Anchor
+    Anchor,
+    Bot,
+    Cpu,
+    Workflow,
+    Layers
 } from 'lucide-react';
 
 const Brochure = ({ onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalPages = 12;
+    const totalPages = 13;
 
     const nextSlide = () => {
         if (currentIndex < totalPages - 1) {
@@ -174,23 +178,61 @@ const Brochure = ({ onBack }) => {
                     <div className="max-w-5xl mx-auto py-20 text-center">
                         <span className="text-purple-500 font-black uppercase tracking-[0.2em] mb-4 block">03. What We Do</span>
                         <h2 className="text-5xl font-black mb-16">Full-Spectrum <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Solutions</span></h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                             {[
                                 { title: "Social Media", icon: <MessageSquare />, color: "border-pink-500" },
                                 { title: "Creative Design", icon: <Layout />, color: "border-purple-500" },
                                 { title: "Brand Identity", icon: <Target />, color: "border-indigo-500" },
+                                { title: "AI Automation", icon: <Bot />, color: "border-emerald-500" },
                                 { title: "Operations/ERP", icon: <Database />, color: "border-blue-500" }
                             ].map((s, i) => (
-                                <div key={i} className={`p-10 bg-slate-900 border-b-8 ${s.color} rounded-2xl flex flex-col items-center shadow-xl`}>
+                                <div key={i} className={`p-8 bg-slate-900 border-b-8 ${s.color} rounded-2xl flex flex-col items-center shadow-xl`}>
                                     <div className="mb-6 text-slate-300">{s.icon}</div>
-                                    <h3 className="font-black uppercase tracking-widest text-xs">{s.title}</h3>
+                                    <h3 className="font-black uppercase tracking-widest text-[10px]">{s.title}</h3>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </Page>
 
-                {/* PAGE 5: SOCIAL SPOTLIGHT */}
+                {/* PAGE 5: AI AUTOMATION SPOTLIGHT (NEW) */}
+                <Page className="bg-black justify-center">
+                    <div className="max-w-4xl mx-auto py-20">
+                        <div className="flex items-center gap-4 mb-12">
+                            <div className="w-12 h-12 bg-emerald-600/20 text-emerald-500 rounded-xl flex items-center justify-center">
+                                <Bot />
+                            </div>
+                            <h2 className="text-4xl font-black uppercase tracking-tight text-white">Intelligent <span className="text-emerald-500">Automation</span></h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-4">
+                                {content.services.aiAutomation.map((s, i) => (
+                                    <div key={i} className="p-6 bg-slate-900/40 rounded-2xl border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                                        <h4 className="font-bold text-sm uppercase tracking-widest text-emerald-400 mb-2">{s.title}</h4>
+                                        <p className="text-xs text-slate-400 leading-relaxed">{s.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="p-10 bg-gradient-to-br from-emerald-600/10 to-teal-600/10 rounded-3xl border border-emerald-500/20 flex flex-col justify-center">
+                                <Cpu size={48} className="text-emerald-500 mb-6" />
+                                <h3 className="text-3xl font-black mb-6 uppercase leading-none">Scale with<br />Intelligence.</h3>
+                                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Our AI solutions aren't just toys—they are operational engines designed to handle bookings, lead qualification, and complex workflows 24/7.
+                                </p>
+                                <div className="space-y-3">
+                                    {['24/7 Customer Engagement', 'Automated Lead Routing', 'Direct Calendar Sync'].map((f, i) => (
+                                        <div key={i} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-emerald-400/80">
+                                            <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
+                                            {f}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Page>
+
+                {/* PAGE 6: SOCIAL SPOTLIGHT */}
                 <Page className="bg-slate-950 justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="flex items-center gap-4 mb-8">
@@ -237,7 +279,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 6: DESIGN SPOTLIGHT */}
+                {/* PAGE 7: DESIGN SPOTLIGHT */}
                 <Page className="bg-black justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="flex items-center gap-4 mb-12">
@@ -265,7 +307,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 7: ERPNEXT SPOTLIGHT */}
+                {/* PAGE 8: ERPNEXT SPOTLIGHT */}
                 <Page className="bg-slate-950 justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -302,7 +344,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 8: THE ROADMAP */}
+                {/* PAGE 9: THE ROADMAP */}
                 <Page className="bg-slate-950">
                     <div className="max-w-4xl mx-auto py-20">
                         <span className="text-purple-500 font-black uppercase tracking-[0.2em] mb-4 block text-center">04. The Success Plan</span>
@@ -321,7 +363,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 9: SUCCESS STORIES */}
+                {/* PAGE 10: SUCCESS STORIES */}
                 <Page className="bg-black">
                     <div className="max-w-5xl mx-auto py-20">
                         <h2 className="text-5xl font-black mb-16 text-center uppercase tracking-tight">Proven <span className="text-purple-500 underline decoration-indigo-500 decoration-4 underline-offset-8">Results</span></h2>
@@ -343,8 +385,8 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 10: THE RIPPLE EFFECT (NEW) */}
-                <Page className="bg-slate-950">
+                {/* PAGE 11: THE RIPPLE EFFECT */}
+                <Page className="bg-slate-950 justify-center">
                     <div className="max-w-4xl mx-auto py-20 flex flex-col items-center text-center">
                         <TrendingUp size={64} className="text-indigo-500 mb-8" />
                         <span className="text-indigo-500 font-black uppercase tracking-[0.2em] mb-4 block">05. The Ripple Effect</span>
@@ -369,7 +411,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 11: OUR MISSION (NEW) */}
+                {/* PAGE 12: OUR MISSION */}
                 <Page className="bg-black justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center h-full">
@@ -402,7 +444,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 12: CALL TO ACTION */}
+                {/* PAGE 13: CALL TO ACTION */}
                 <Page className="bg-slate-950 justify-center items-center text-center">
                     <div className="max-w-2xl px-6">
                         <img src="/logo.png" alt="Logo" className="w-24 mb-12 mx-auto" />

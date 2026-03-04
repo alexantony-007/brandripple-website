@@ -69,6 +69,28 @@ export const content = {
             { title: "Website Design & Development", desc: "Crafting modern, high-converting websites optimized for all devices." },
             { title: "Email Marketing", desc: "Direct-to-inbox strategies that nurture leads and drive repeat business." },
             { title: "ERPNext Implementation", desc: "Streamlining your business operations with powerful, integrated modules." }
+        ],
+        aiAutomation: [
+            {
+                title: "AI Chatbots & Voice Agents",
+                desc: "Intelligent conversational AI that engages customers 24/7, answers questions, qualifies leads, and handles bookings.",
+                features: ["Natural language understanding", "Multi-channel deployment (web, WhatsApp, mobile)", "Lead qualification and routing", "Appointment scheduling"]
+            },
+            {
+                title: "CRM & System Integration",
+                desc: "Connect your tools and platforms to create a unified ecosystem that works seamlessly together.",
+                features: ["Two-way CRM synchronisation", "API integrations", "Data migration and cleanup", "Custom connector development"]
+            },
+            {
+                title: "Workflow Automations",
+                desc: "Eliminate manual tasks and streamline operations with custom automation workflows tailored to your business.",
+                features: ["Document processing and data entry", "Approval workflows", "Task assignment and tracking", "Notification and alert systems"]
+            },
+            {
+                title: "Sales & Lead Automation",
+                desc: "Capture, nurture, and convert leads automatically while your sales team focuses on closing deals.",
+                features: ["Lead capture from multiple sources", "Automated follow-up sequences", "Lead scoring and prioritisation", "Pipeline management"]
+            }
         ]
     },
     plan: {
@@ -209,7 +231,15 @@ export const content = {
     faq: [
         {
             question: "How does Brandripple help businesses grow?",
-            answer: "We use the StoryBrand framework to clarify your message, combined with targeted social media marketing and ERPNext operational streamlining to ensure you can scale efficiently without the chaos."
+            answer: "We use the StoryBrand framework to clarify your message, combined with targeted social media marketing, AI automation, and ERPNext operational streamlining to ensure you can scale efficiently."
+        },
+        {
+            question: "What is AI Automation and how does it benefit me?",
+            answer: "AI Automation involves using intelligent software to handle repetitive tasks—like answering customer queries via chatbots, auto-scheduling appointments, and syncing lead data across your CRM—giving you more time for strategy."
+        },
+        {
+            question: "Can AI really handle my customer bookings?",
+            answer: "Yes. Our AI Voice and Chat Agents can understand natural language, qualify leads, and directly integrate with your calendar (like Google or Outlook) to book appointments 24/7 without human intervention."
         },
         {
             question: "What is ERPNext implementation?",
@@ -221,7 +251,7 @@ export const content = {
         },
         {
             question: "Where is Brandripple located?",
-            answer: "Brandripple Operations and Management is based in Dubai, UAE, and provides digital marketing and ERP services globally."
+            answer: "Brandripple Operations and Management is based in Abu Dhabi, UAE, and provides digital marketing, AI automation, and ERP services globally."
         },
         {
             question: "What platforms do you support for social media marketing?",
@@ -245,7 +275,7 @@ export const content = {
         },
         {
             question: "Can I scale my services as my business grows?",
-            answer: "Absolutely. Our solutions are designed to grow with you. You can start with social media marketing and later add ERPNext or advanced branding as your needs evolve."
+            answer: "Absolutely. Our solutions are designed to grow with you. You can start with social media marketing and later add AI Automation or ERPNext as your needs evolve."
         },
         {
             question: "What is Generative Engine Optimization (GEO)?",
@@ -256,6 +286,64 @@ export const content = {
             answer: "The easiest way is to book a strategy call or send us a message via WhatsApp. We'll discuss your goals and align on the best path forward for your brand."
         }
     ],
+    comparisonTiers: {
+        heading: "Intelligent Scale, Measured Results",
+        subheading: "Choose the automation tier that matches your current growth stage.",
+        tiers: [
+            {
+                name: "Essential",
+                level: "Growth Foundation",
+                features: [
+                    { label: "Keywords Ranker", value: "20 Keywords | Google Maps", included: true },
+                    { label: "Competitors Tracker", value: "10 Competitors", included: true },
+                    { label: "Geo Grid Ranker", value: "20 Scans", included: true },
+                    { label: "Magic Coins", value: "1000 Coins", included: true },
+                    { label: "AI Driven Reviews Management", included: true },
+                    { label: "Audit & Suspension Score Analysis", included: true },
+                    { label: "Social Media Scheduling", included: true },
+                    { label: "Bing & 20+ Dir. Integration", included: false },
+                    { label: "Bulk Listing Management", included: false },
+                    { label: "Dedicated Business Coach", included: false },
+                    { label: "Agency Whitelabelling", included: false }
+                ]
+            },
+            {
+                name: "Professional",
+                level: "Operational Efficiency",
+                recommended: true,
+                features: [
+                    { label: "Keywords Ranker", value: "30 Keywords | Search & Maps", included: true },
+                    { label: "Competitors Tracker", value: "20 Competitors", included: true },
+                    { label: "Geo Grid Ranker", value: "100 Scans", included: true },
+                    { label: "Magic Coins", value: "3000 Coins", included: true },
+                    { label: "AI Driven Reviews Management", value: "Multiple Directories", included: true },
+                    { label: "Audit & Suspension Score Analysis", included: true },
+                    { label: "Social Media Scheduling", included: true },
+                    { label: "Bing & 20+ Dir. Integration", included: true },
+                    { label: "Bulk Listing Management", value: "AI Powered", included: true },
+                    { label: "Dedicated Business Coach", included: true },
+                    { label: "Agency Whitelabelling", included: false }
+                ]
+            },
+            {
+                name: "Enterprise",
+                level: "Market Domination",
+                features: [
+                    { label: "Keywords Ranker", value: "30 Keywords | Search & Maps", included: true },
+                    { label: "Competitors Tracker", value: "20 Competitors", included: true },
+                    { label: "Geo Grid Ranker", value: "300 Scans", included: true },
+                    { label: "Magic Coins", value: "5000 Coins", included: true },
+                    { label: "AI Driven Reviews Management", value: "Multiple Directories", included: true },
+                    { label: "Audit & Suspension Score Analysis", included: true },
+                    { label: "Social Media Scheduling", included: true },
+                    { label: "Bing & 20+ Dir. Integration", included: true },
+                    { label: "Bulk Listing Management", value: "AI Powered", included: true },
+                    { label: "Dedicated Business Coach", included: true },
+                    { label: "Agency Whitelabelling", included: true }
+                ]
+            }
+        ]
+    },
     brandGuidelines: {
         colors: [
             { name: "Primary Purple", hex: "#A855F7", tailwind: "purple-500", desc: "Our main accent color, used for gradients and primary CTAs." },
