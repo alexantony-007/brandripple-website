@@ -47,11 +47,7 @@ const ComparisonTable = () => {
                                     <div key={fi} className="flex flex-col gap-1 pb-4 border-b border-slate-800/50 last:border-0">
                                         <div className="flex items-center gap-3">
                                             <div className="flex-shrink-0 mt-0.5">
-                                                {feature.value ? (
-                                                    <span className="text-sm font-semibold text-indigo-300">
-                                                        {feature.value}
-                                                    </span>
-                                                ) : feature.included ? (
+                                                {(feature.included || feature.value) ? (
                                                     <div className="bg-emerald-500/20 p-1 rounded-full">
                                                         <Check size={12} className="text-emerald-500" strokeWidth={3} />
                                                     </div>
@@ -61,12 +57,12 @@ const ComparisonTable = () => {
                                                     </div>
                                                 )}
                                             </div>
-                                            <span className={`text-sm font-bold uppercase tracking-wide ${feature.included ? 'text-slate-200' : 'text-slate-600'}`}>
+                                            <span className={`flex-1 text-sm font-bold uppercase tracking-wide ${(feature.included || feature.value) ? 'text-slate-200' : 'text-slate-600'} break-words whitespace-normal leading-snug`}>
                                                 {feature.label}
                                             </span>
                                         </div>
                                         {feature.value && (
-                                            <div className="ml-7 text-[10px] font-black uppercase tracking-widest text-indigo-400 bg-indigo-400/5 px-2 py-0.5 rounded inline-block w-fit">
+                                            <div className="ml-9 text-[10.5px] font-black uppercase tracking-widest text-indigo-300 bg-indigo-500/10 px-2.5 py-1 rounded inline-block w-fit max-w-[calc(100%-2.25rem)] break-words whitespace-normal text-left">
                                                 {feature.value}
                                             </div>
                                         )}
