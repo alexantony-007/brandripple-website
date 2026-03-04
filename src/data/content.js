@@ -327,6 +327,10 @@ export const content = {
         {
             question: "Why do these packages have a 6-month minimum retainer?",
             answer: "Real social media growth isn't a 'one-week magic trick'. It takes time to build trust with algorithms and audiences. A 6-month window allowed us to implement the strategy, test ad variations, and deliver the sustainable ROI your business deserves."
+        },
+        {
+            question: "What is 'Proactive Community Building'?",
+            answer: "Most agencies just post and leave. Proactive Community Building means we actively go out and find your customers. We engage with their content, answer their comments, join relevant conversations, and build real relationships with your audience so they become loyal fans, not just followers."
         }
     ],
     socialMediaPackages: {
