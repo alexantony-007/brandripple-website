@@ -83,10 +83,13 @@ const ComparisonTable = () => {
                 </div>
 
                 {/* Local Business Note */}
-                <div className="mt-20 text-center">
+                <div className="mt-20 text-center flex flex-col items-center gap-2">
                     <p className="flex items-center justify-center gap-2 text-slate-500 text-sm italic">
                         <Info size={16} className="text-indigo-500 shrink-0" />
                         All packages require a minimum 6-month retainer. UAE National Events posts are complimentary.
+                    </p>
+                    <p className="text-slate-500 text-sm italic">
+                        * Arabic content and copy are translated and localized using advanced AI.
                     </p>
                 </div>
             </div>
