@@ -305,7 +305,7 @@ export const content = {
         subheading: "Select the package that best aligns with your goals and growth ambitions.",
         tiers: [
             {
-                name: "Starter",
+                name: "Brand Launchpad",
                 level: "IG + FB",
                 price: "AED 2,500 / Month",
                 features: [
@@ -322,7 +322,7 @@ export const content = {
                 ]
             },
             {
-                name: "Classic",
+                name: "Momentum Builder",
                 level: "IG + FB + LI",
                 price: "AED 4,500 / Month",
                 recommended: true,
@@ -341,7 +341,7 @@ export const content = {
                 ]
             },
             {
-                name: "Growth",
+                name: "Audience Architect",
                 level: "IG + FB + LI",
                 price: "AED 6,500 / Month",
                 features: [
@@ -359,7 +359,7 @@ export const content = {
                 ]
             },
             {
-                name: "Professional",
+                name: "Authority Engine",
                 level: "Full-Service",
                 price: "AED 9,500 / Month",
                 features: [
@@ -378,7 +378,7 @@ export const content = {
                 ]
             },
             {
-                name: "Elite",
+                name: "Market Dominator",
                 level: "360° Digital",
                 price: "AED 14,000 / Month",
                 features: [

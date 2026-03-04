@@ -46,15 +46,21 @@ const ComparisonTable = () => {
                                 {tier.features.map((feature, fi) => (
                                     <div key={fi} className="flex flex-col gap-1 pb-4 border-b border-slate-800/50 last:border-0">
                                         <div className="flex items-center gap-3">
-                                            {feature.included ? (
-                                                <div className="bg-emerald-500/20 p-1 rounded-full">
-                                                    <Check size={12} className="text-emerald-500" strokeWidth={3} />
-                                                </div>
-                                            ) : (
-                                                <div className="bg-rose-500/20 p-1 rounded-full">
-                                                    <X size={12} className="text-rose-500" strokeWidth={3} />
-                                                </div>
-                                            )}
+                                            <div className="flex-shrink-0 mt-0.5">
+                                                {feature.value ? (
+                                                    <span className="text-sm font-semibold text-indigo-300">
+                                                        {feature.value}
+                                                    </span>
+                                                ) : feature.included ? (
+                                                    <div className="bg-emerald-500/20 p-1 rounded-full">
+                                                        <Check size={12} className="text-emerald-500" strokeWidth={3} />
+                                                    </div>
+                                                ) : (
+                                                    <div className="bg-rose-500/20 p-1 rounded-full">
+                                                        <X size={12} className="text-rose-500" strokeWidth={3} />
+                                                    </div>
+                                                )}
+                                            </div>
                                             <span className={`text-sm font-bold uppercase tracking-wide ${feature.included ? 'text-slate-200' : 'text-slate-600'}`}>
                                                 {feature.label}
                                             </span>
