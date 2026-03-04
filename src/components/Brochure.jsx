@@ -25,7 +25,7 @@ import {
 
 const Brochure = ({ onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalPages = 17;
+    const totalPages = 16;
 
     const nextSlide = () => {
         if (currentIndex < totalPages - 1) {
@@ -382,29 +382,12 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 10: OUR GROWTH PACKAGES - INTRO */}
-                <Page className="bg-slate-950 justify-center items-center text-center">
-                    <div className="absolute inset-0 opacity-10">
-                        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0,transparent_70%)]"></div>
-                    </div>
-                    <div className="max-w-3xl relative z-10">
-                        <span className="text-indigo-500 font-black uppercase tracking-[0.4em] mb-6 block">Tiered Strategy</span>
-                        <h2 className="text-7xl font-black mb-8 leading-none uppercase tracking-tighter">
-                            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Growth</span><br />
-                            Packages
-                        </h2>
-                        <div className="w-32 h-2 bg-indigo-500 mx-auto mb-10"></div>
-                        <p className="text-xl text-slate-400 leading-relaxed font-light italic">
-                            "Select the package that best aligns with your goals and growth ambitions. Every tier is a calculated architect of your brand's future."
-                        </p>
-                    </div>
-                </Page>
 
-                {/* PAGE 11: GROWTH PACKAGES - THE FOUNDATION */}
+                {/* PAGE 10: GROWTH PACKAGES - THE FOUNDATION */}
                 <Page className="bg-slate-950 justify-center">
                     <div className="max-w-5xl mx-auto py-20 text-center">
                         <span className="text-indigo-500 font-black uppercase tracking-[0.2em] mb-4 block">04. Growth Packages</span>
-                        <h2 className="text-5xl font-black mb-12">Social Media <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Launchpads</span></h2>
+                        <h2 className="text-5xl font-black mb-12">Social Media <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Growth Packages</span></h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {content.socialMediaPackages.tiers.slice(0, 3).map((tier, i) => (
                                 <div key={i} className={`p-8 rounded-3xl border ${tier.recommended ? 'bg-indigo-600/10 border-indigo-500' : 'bg-slate-900/40 border-slate-800'} text-left`}>
@@ -425,7 +408,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 12: GROWTH PACKAGES - THE POWERHOUSES */}
+                {/* PAGE 11: GROWTH PACKAGES - THE POWERHOUSES */}
                 <Page className="bg-black justify-center">
                     <div className="max-w-5xl mx-auto py-20 text-center">
                         <h2 className="text-5xl font-black mb-12">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">Power Matrix</span></h2>
