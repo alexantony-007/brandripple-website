@@ -6,7 +6,7 @@ const ComparisonTable = () => {
     const { heading, subheading, tiers } = content.socialMediaPackages;
 
     return (
-        <section className="py-24 bg-slate-950 relative overflow-hidden">
+        <section id="pricing" className="py-24 bg-slate-950 relative overflow-hidden">
             {/* Background Decor */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/5 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>

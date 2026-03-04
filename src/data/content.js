@@ -111,6 +111,7 @@ export const content = {
     footer: {
         links: [
             { label: "Services", href: "#services" },
+            { label: "Pricing", href: "#pricing" },
             { label: "Our Process", href: "#process" },
             { label: "Blog", href: "#blog" },
             { label: "Contact", href: "#contact" },
