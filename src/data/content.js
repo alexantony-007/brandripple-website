@@ -91,6 +91,12 @@ export const content = {
                 desc: "Capture, nurture, and convert leads automatically while your sales team focuses on closing deals.",
                 features: ["Lead capture from multiple sources", "Automated follow-up sequences", "Lead scoring and prioritisation", "Pipeline management"]
             }
+        ],
+        scale: [
+            { title: "Keywords Ranker", desc: "Track and optimize up to 30 strategic keywords across Google Search & Maps." },
+            { title: "Geo Grid Ranking", desc: "Hyper-local visibility analysis with up to 300 scans to dominate your area." },
+            { title: "Competitor Tracking", desc: "Monitor your top 20 competitors' moves and stay ahead of market trends." },
+            { title: "AI Review Management", desc: "Automate and enhance your reputation across multiple global directories." }
         ]
     },
     plan: {
