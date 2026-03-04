@@ -25,7 +25,7 @@ import {
 
 const Brochure = ({ onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalPages = 16;
+    const totalPages = 17;
 
     const nextSlide = () => {
         if (currentIndex < totalPages - 1) {
@@ -345,15 +345,16 @@ const Brochure = ({ onBack }) => {
                 </Page>
 
                 {/* PAGE 9: INTELLIGENT SCALE SPOTLIGHT */}
-                <Page className="bg-black justify-center">
-                    <div className="max-w-4xl mx-auto py-20">
-                        <div className="flex items-center gap-4 mb-12">
-                            <div className="w-12 h-12 bg-orange-600/20 text-orange-500 rounded-xl flex items-center justify-center">
-                                <TrendingUp />
+                <Page className="bg-black justify-center items-center text-center">
+                    <div className="max-w-4xl w-full py-20">
+                        <div className="flex flex-col items-center mb-12">
+                            <div className="w-16 h-16 bg-orange-600/20 text-orange-500 rounded-2xl flex items-center justify-center mb-6">
+                                <TrendingUp size={32} />
                             </div>
-                            <h2 className="text-4xl font-black uppercase tracking-tight text-white">Advanced <span className="text-orange-500">Intelligent Scale</span></h2>
+                            <h2 className="text-5xl font-black uppercase tracking-tight text-white italic">Advanced <span className="text-orange-500">Intelligent Scale</span></h2>
+                            <div className="w-24 h-1 bg-orange-500 mt-4 mx-auto"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                             <div className="space-y-4">
                                 {content.services.scale.map((s, i) => (
                                     <div key={i} className="p-6 bg-slate-900/40 rounded-2xl border border-slate-800 hover:border-orange-500/30 transition-colors">
@@ -381,7 +382,25 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 10: GROWTH PACKAGES - THE FOUNDATION */}
+                {/* PAGE 10: OUR GROWTH PACKAGES - INTRO */}
+                <Page className="bg-slate-950 justify-center items-center text-center">
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0,transparent_70%)]"></div>
+                    </div>
+                    <div className="max-w-3xl relative z-10">
+                        <span className="text-indigo-500 font-black uppercase tracking-[0.4em] mb-6 block">Tiered Strategy</span>
+                        <h2 className="text-7xl font-black mb-8 leading-none uppercase tracking-tighter">
+                            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Growth</span><br />
+                            Packages
+                        </h2>
+                        <div className="w-32 h-2 bg-indigo-500 mx-auto mb-10"></div>
+                        <p className="text-xl text-slate-400 leading-relaxed font-light italic">
+                            "Select the package that best aligns with your goals and growth ambitions. Every tier is a calculated architect of your brand's future."
+                        </p>
+                    </div>
+                </Page>
+
+                {/* PAGE 11: GROWTH PACKAGES - THE FOUNDATION */}
                 <Page className="bg-slate-950 justify-center">
                     <div className="max-w-5xl mx-auto py-20 text-center">
                         <span className="text-indigo-500 font-black uppercase tracking-[0.2em] mb-4 block">04. Growth Packages</span>
@@ -406,7 +425,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 11: GROWTH PACKAGES - THE POWERHOUSES */}
+                {/* PAGE 12: GROWTH PACKAGES - THE POWERHOUSES */}
                 <Page className="bg-black justify-center">
                     <div className="max-w-5xl mx-auto py-20 text-center">
                         <h2 className="text-5xl font-black mb-12">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">Power Matrix</span></h2>
