@@ -331,6 +331,10 @@ export const content = {
         {
             question: "What is 'Proactive Community Building'?",
             answer: "Most agencies just post and leave. Proactive Community Building means we actively go out and find your customers. We engage with their content, answer their comments, join relevant conversations, and build real relationships with your audience so they become loyal fans, not just followers."
+        },
+        {
+            question: "Can I review the posts before they go live?",
+            answer: "Absolutely. We follow a 'No Surprises' policy. Every month, you’ll receive a full content calendar for review. Nothing ever goes live on your profiles until you have seen it, provided your feedback, and given us the final green light."
         }
     ],
     socialMediaPackages: {
