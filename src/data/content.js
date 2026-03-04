@@ -38,11 +38,11 @@ export const content = {
         ]
     },
     guide: {
-        heading: "We've Been There. We Can Help.",
-        description: "At Brandripple, we combine creative digital marketing with robust ERPNext implementation. We don't just get you leads; we help you build the infrastructure to handle them.",
+        heading: "Elevating your brand's digital presence.",
+        description: "BrandRipple is a results-driven social media growth agency trusted by 200+ businesses across the UAE and beyond. We combine creative digital marketing with robust ERPNext implementation to help you scale without the chaos.",
         stats: [
-            { label: "Platforms Optimized", value: "10+" },
-            { label: "Growth Delivered", value: "100%" },
+            { label: "Businesses Trusted", value: "200+" },
+            { label: "Avg. Visibility Increase", value: "40%+" },
         ]
     },
     services: {
@@ -91,25 +91,15 @@ export const content = {
                 desc: "Capture, nurture, and convert leads automatically while your sales team focuses on closing deals.",
                 features: ["Lead capture from multiple sources", "Automated follow-up sequences", "Lead scoring and prioritisation", "Pipeline management"]
             }
-        ],
-        scale: [
-            { title: "Keywords Ranker", desc: "Track and optimize up to 30 strategic keywords across Google Search & Maps." },
-            { title: "Geo Grid Ranking", desc: "Hyper-local visibility analysis with up to 300 scans to dominate your area." },
-            { title: "Competitor Tracking", desc: "Monitor your top 20 competitors' moves and stay ahead of market trends." },
-            { title: "AI Review Management", desc: "Automate and enhance your reputation across multiple global directories." }
         ]
     },
     plan: {
-        heading: "Our 8-Step Process to Success",
+        heading: "Monthly Workflow — Operating System",
         steps: [
-            { number: "01", title: "Discovery & Alignment", desc: "We call to understand your brand, align on goals, and select the right social platforms." },
-            { number: "02", title: "Profile Optimization", desc: "In the first week, we revamp your profiles to ensure maximum visibility and impact." },
-            { number: "03", title: "Content Strategy Session", desc: "Day 10 meeting to brainstorm and finalize content topics for the next 30 days." },
-            { number: "04", title: "Calendar & Mockups", desc: "We create a content calendar with post mockups, capillaries, and hashtags for your approval." },
-            { number: "05", title: "Schedule & Publish", desc: "Once approved, we handle all the scheduling and publishing across channels." },
-            { number: "06", title: "Bi-Weekly Review", desc: "Every 15 days, we review performance to ensure we remain on the right track." },
-            { number: "07", title: "Monthly Reporting", desc: "Comprehensive reports detailing growth, engagement, and ROI." },
-            { number: "08", title: "Targeted Ad Boosts", desc: "Strategic boosting of high-performing posts to reach a wider audience." },
+            { number: "01", title: "Strategy & Planning", desc: "Align monthly themes, develop content calendar, and prepare messaging angles & creative direction." },
+            { number: "02", title: "Content Production & Approval", desc: "Design and produce all visual assets, shoot/edit reels, and compile content for client review." },
+            { number: "03", title: "Publishing & Campaign Execution", desc: "Publish approved content, launch paid ads, and monitor engagement across all platforms." },
+            { number: "04", title: "Reporting & Adjustments", desc: "Review KPIs, prepare monthly reports, identify insights, and adjust strategy for the upcoming month." },
         ]
     },
     footer: {
@@ -292,60 +282,86 @@ export const content = {
             answer: "The easiest way is to book a strategy call or send us a message via WhatsApp. We'll discuss your goals and align on the best path forward for your brand."
         }
     ],
-    comparisonTiers: {
-        heading: "Intelligent Scale, Measured Results",
-        subheading: "Choose the automation tier that matches your current growth stage.",
+    socialMediaPackages: {
+        heading: "Our Growth Packages",
+        subheading: "Select the package that best aligns with your goals and growth ambitions.",
         tiers: [
             {
-                name: "Essential",
-                level: "Growth Foundation",
+                name: "Starter",
+                level: "IG + FB",
+                price: "AED 2,500 / Month",
                 features: [
-                    { label: "Keywords Ranker", value: "20 Keywords | Google Maps", included: true },
-                    { label: "Competitors Tracker", value: "10 Competitors", included: true },
-                    { label: "Geo Grid Ranker", value: "20 Scans", included: true },
-                    { label: "Magic Coins", value: "1000 Coins", included: true },
-                    { label: "AI Driven Reviews Management", included: true },
-                    { label: "Audit & Suspension Score Analysis", included: true },
-                    { label: "Social Media Scheduling", included: true },
-                    { label: "Bing & 20+ Dir. Integration", included: false },
-                    { label: "Bulk Listing Management", included: false },
-                    { label: "Dedicated Business Coach", included: false },
-                    { label: "Agency Whitelabelling", included: false }
+                    { label: "10 Posts per Month", included: true },
+                    { label: "2 Reels / Videos per Month", included: true },
+                    { label: "8 Stories per Month", included: true },
+                    { label: "Bio & Highlights Mgmt", included: true },
+                    { label: "Monthly Content Calendar", included: true },
+                    { label: "Bilingual Copy", included: false },
+                    { label: "Monthly Photoshoot", included: false },
+                    { label: "Paid Social Ads", included: false },
+                    { label: "Google Ads & SEO", included: false }
+                ]
+            },
+            {
+                name: "Classic",
+                level: "IG + FB + LI",
+                price: "AED 3,800 / Month",
+                recommended: true,
+                features: [
+                    { label: "10 Posts per Month", included: true },
+                    { label: "4 Reels / Videos per Month", included: true },
+                    { label: "10 Stories per Month", included: true },
+                    { label: "Bio & Highlights Mgmt", included: true },
+                    { label: "1 Paid Ad Campaign", included: true },
+                    { label: "Monthly Content Calendar", included: true },
+                    { label: "Bilingual Copy", included: false },
+                    { label: "Monthly Photoshoot", included: false },
+                    { label: "Google Ads & SEO", included: false }
+                ]
+            },
+            {
+                name: "Growth",
+                level: "IG + FB + LI",
+                price: "AED 5,500 / Month",
+                features: [
+                    { label: "15 Posts per Month", included: true },
+                    { label: "6 Reels / Videos per Month", included: true },
+                    { label: "12 Stories per Month", included: true },
+                    { label: "Bilingual Copy (EN + AR)", included: true },
+                    { label: "Bio & Highlights Mgmt", included: true },
+                    { label: "2 Paid Ad Campaigns", included: true },
+                    { label: "Monthly Photoshoot", included: false },
+                    { label: "Google Ads & SEO", included: false }
                 ]
             },
             {
                 name: "Professional",
-                level: "Operational Efficiency",
-                recommended: true,
+                level: "Full-Service",
+                price: "AED 7,500 / Month",
                 features: [
-                    { label: "Keywords Ranker", value: "30 Keywords | Search & Maps", included: true },
-                    { label: "Competitors Tracker", value: "20 Competitors", included: true },
-                    { label: "Geo Grid Ranker", value: "100 Scans", included: true },
-                    { label: "Magic Coins", value: "3000 Coins", included: true },
-                    { label: "AI Driven Reviews Management", value: "Multiple Directories", included: true },
-                    { label: "Audit & Suspension Score Analysis", included: true },
-                    { label: "Social Media Scheduling", included: true },
-                    { label: "Bing & 20+ Dir. Integration", included: true },
-                    { label: "Bulk Listing Management", value: "AI Powered", included: true },
-                    { label: "Dedicated Business Coach", included: true },
-                    { label: "Agency Whitelabelling", included: false }
+                    { label: "20 Posts per Month", included: true },
+                    { label: "8 Reels / Videos per Month", included: true },
+                    { label: "15 Stories per Month", included: true },
+                    { label: "Bilingual Copy (EN + AR)", included: true },
+                    { label: "Monthly Photoshoot", included: true },
+                    { label: "Full Paid Social Ads", included: true },
+                    { label: "Google Ads (20 keywords)", included: true },
+                    { label: "SEO", included: false }
                 ]
             },
             {
-                name: "Enterprise",
-                level: "Market Domination",
+                name: "Elite",
+                level: "360° Digital",
+                price: "AED 11,000 / Month",
                 features: [
-                    { label: "Keywords Ranker", value: "30 Keywords | Search & Maps", included: true },
-                    { label: "Competitors Tracker", value: "20 Competitors", included: true },
-                    { label: "Geo Grid Ranker", value: "300 Scans", included: true },
-                    { label: "Magic Coins", value: "5000 Coins", included: true },
-                    { label: "AI Driven Reviews Management", value: "Multiple Directories", included: true },
-                    { label: "Audit & Suspension Score Analysis", included: true },
-                    { label: "Social Media Scheduling", included: true },
-                    { label: "Bing & 20+ Dir. Integration", included: true },
-                    { label: "Bulk Listing Management", value: "AI Powered", included: true },
-                    { label: "Dedicated Business Coach", included: true },
-                    { label: "Agency Whitelabelling", included: true }
+                    { label: "30+ Posts per Month", included: true },
+                    { label: "10 Reels / Videos per Month", included: true },
+                    { label: "20+ Stories per Month", included: true },
+                    { label: "Bilingual Copy (EN + AR)", included: true },
+                    { label: "Monthly Photoshoot", included: true },
+                    { label: "Full Paid Social Ads", included: true },
+                    { label: "Google Ads (20 keywords)", included: true },
+                    { label: "SEO (20 keywords)", included: true }
                 ]
             }
         ]
@@ -380,7 +396,7 @@ export const content = {
     },
     about: {
         title: "The Story Behind the Ripple",
-        bio: "Brandripple Operations and Management was born from a simple realization: digital marketing alone isn't enough. Businesses need a bridge between their online presence and their internal operations. By fusing the StoryBrand framework with the power of ERPNext, we help organizations not just get found, but stay organized as they scale. Based in Dubai, we serve a global clientele of forward-thinking brands who are ready to move beyond the chaos.",
+        bio: "BrandRipple is a results-driven social media growth agency trusted by 200+ businesses across the UAE and beyond. We are growth architects who strategically identify points of expansion and scale our clients' businesses. By fusing data-driven strategies with our bilingual (English & Arabic) content capabilities, we help you build a magnetic brand. Based in Abu Dhabi and Dubai, we serve a forward-thinking clientele ready to move beyond the chaos.",
         founder: {
             name: "Founder",
             role: "Strategist & Operations Specialist",

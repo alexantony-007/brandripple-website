@@ -87,16 +87,8 @@ const Services = () => {
                         "text-emerald-400",
                         "hover:border-emerald-500/30 hover:shadow-emerald-900/10"
                     )}
-                    {renderCategory(
-                        "INTELLIGENT SCALE",
-                        content.services.scale,
-                        <TrendingUp size={24} />,
-                        "text-orange-400",
-                        "hover:border-orange-500/30 hover:shadow-orange-900/10"
-                    )}
                 </div>
 
-                {/* AI / Local Visibility Comparison */}
                 <ComparisonTable />
             </div>
         </section>

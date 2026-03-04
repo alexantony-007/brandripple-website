@@ -3,7 +3,7 @@ import { Check, X, Info } from 'lucide-react';
 import { content } from '../data/content';
 
 const ComparisonTable = () => {
-    const { heading, subheading, tiers } = content.comparisonTiers;
+    const { heading, subheading, tiers } = content.socialMediaPackages;
 
     return (
         <section className="py-24 bg-slate-950 relative overflow-hidden">
@@ -21,24 +21,25 @@ const ComparisonTable = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto px-2">
                     {tiers.map((tier, i) => (
                         <div
                             key={i}
                             className={`relative p-8 rounded-3xl border transition-all duration-500 hover:-translate-y-2 ${tier.recommended
-                                    ? 'bg-indigo-600/10 border-indigo-500 shadow-2xl shadow-indigo-500/10'
-                                    : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
+                                ? 'bg-indigo-600/10 border-indigo-500 shadow-2xl shadow-indigo-500/10'
+                                : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
                                 }`}
                         >
                             {tier.recommended && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
                                     Recommended
                                 </div>
                             )}
 
-                            <div className="mb-8">
+                            <div className="mb-6">
                                 <div className="text-xs font-black uppercase tracking-[.2em] text-slate-500 mb-2">{tier.level}</div>
-                                <h3 className="text-3xl font-black text-white uppercase italic">{tier.name}</h3>
+                                <h3 className="text-2xl font-black text-white uppercase italic">{tier.name}</h3>
+                                <div className="text-sm font-bold text-indigo-400 mt-2 bg-indigo-500/10 px-3 py-1.5 rounded-lg inline-block">{tier.price}</div>
                             </div>
 
                             <div className="space-y-4">
@@ -69,8 +70,8 @@ const ComparisonTable = () => {
 
                             <div className="mt-12">
                                 <button className={`w-full py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all shadow-xl hover:shadow-indigo-500/20 hover:scale-[1.02] active:scale-95 ${tier.recommended
-                                        ? 'bg-indigo-500 text-white hover:bg-indigo-400'
-                                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
+                                    ? 'bg-indigo-500 text-white hover:bg-indigo-400'
+                                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
                                     }`}>
                                     Select Plan
                                 </button>
@@ -82,8 +83,8 @@ const ComparisonTable = () => {
                 {/* Local Business Note */}
                 <div className="mt-20 text-center">
                     <p className="flex items-center justify-center gap-2 text-slate-500 text-sm italic">
-                        <Info size={16} className="text-indigo-500" />
-                        All plans include core local business directory optimization and performance reporting.
+                        <Info size={16} className="text-indigo-500 shrink-0" />
+                        All packages require a minimum 6-month retainer. UAE National Events posts are complimentary.
                     </p>
                 </div>
             </div>
