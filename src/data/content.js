@@ -243,7 +243,7 @@ export const content = {
         },
         {
             question: "Does Brandripple handle social media content creation?",
-            answer: "Yes, we follow a strict 8-step process that includes profile optimization, content strategy sessions, mockups, and monthly reporting across Instagram, Facebook, and LinkedIn."
+            answer: "Yes, we follow a structured 4-week Monthly Workflow that includes Strategy & Planning, Content Production, Publishing & Campaign Execution, and detailed Reporting & Adjustments across your essential platforms."
         },
         {
             question: "Where is Brandripple located?",
@@ -262,8 +262,20 @@ export const content = {
             answer: "StoryBrand is a marketing methodology that clarifies your brand message by positioning your customer as the 'Hero' and your brand as the 'Guide' who helps them succeed."
         },
         {
-            question: "Do you offer customized marketing packages?",
-            answer: "Yes, we offer flexible packages tailored to your specific business goals, whether you're a startup looking for visibility or an established brand scaling operations."
+            question: "What Social Media Growth Packages do you offer?",
+            answer: "We offer five distinct tiers tailored to your goals: Starter, Classic, Growth, Professional, and Elite. These range from essential social media management to full-service 360° digital marketing campaigns."
+        },
+        {
+            question: "Is paid advertising included in the Growth Packages?",
+            answer: "Yes! Our Classic, Growth, Professional, and Elite packages include dedicated Paid Social Ad campaigns. Furthermore, our Professional and Elite tiers also include comprehensive Google Ads management."
+        },
+        {
+            question: "What is the minimum contract duration for your services?",
+            answer: "To ensure we deliver measurable, sustainable results and truly elevate your brand's digital presence, all our social media Growth Packages require a minimum 6-month retainer."
+        },
+        {
+            question: "Are national holiday or event posts included?",
+            answer: "Absolutely. UAE National Events posts are provided complimentary across all our Growth Packages."
         },
         {
             question: "How do you track the success of digital campaigns?",
