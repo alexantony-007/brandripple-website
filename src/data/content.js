@@ -299,6 +299,34 @@ export const content = {
         {
             question: "How do I get started with Brandripple?",
             answer: "The easiest way is to book a strategy call or send us a message via WhatsApp. We'll discuss your goals and align on the best path forward for your brand."
+        },
+        {
+            question: "What does 'Platforms Managed' actually mean?",
+            answer: "It means we take full ownership of your chosen social channels. This includes designing the graphics, writing the captions, scheduling the posts, and monitoring engagement. You provide the vision; we handle the daily execution."
+        },
+        {
+            question: "Why do I need 'StoryBrand Profile Optimization'?",
+            answer: "Most profiles confuse visitors, causing them to leave instantly. A StoryBrand optimized profile uses a specific communication framework to tell visitors exactly how you solve their problem, making your brand instantly magnetic and clear."
+        },
+        {
+            question: "What is the benefit of 'Localized Bilingual Copy (EN + AR)'?",
+            answer: "In the UAE, your audience is diverse. By posting in both professional English and localized Arabic, you double your potential reach and show cultural respect, which builds deeper trust with the local market."
+        },
+        {
+            question: "How do 'Paid Social Ads' differ from regular posts?",
+            answer: "Regular (organic) posts are seen mostly by your current followers. Paid Ads are 'growth engines' that allow us to specifically target thousands of new people based on their interests, age, and location to bring in fresh leads."
+        },
+        {
+            question: "What is an 'AI Lead Qualification Chatbot'?",
+            answer: "It's an intelligent digital assistant that talks to customers instantly 24/7. Instead of you answering 'What are your prices?' or 'Where are you located?' 100 times, the bot handles it and only 'handshakes' the high-value, ready-to-buy leads over to you."
+        },
+        {
+            question: "What is 'Google Maps Optimization'?",
+            answer: "When someone searches 'best [your business] in Abu Dhabi', you want to be in the Top 3. We optimize your profile, keywords, and reviews so you stay visible where customers are actively looking to visit or buy locally."
+        },
+        {
+            question: "Why do these packages have a 6-month minimum retainer?",
+            answer: "Real social media growth isn't a 'one-week magic trick'. It takes time to build trust with algorithms and audiences. A 6-month window allowed us to implement the strategy, test ad variations, and deliver the sustainable ROI your business deserves."
         }
     ],
     socialMediaPackages: {
