@@ -11,7 +11,8 @@ import {
     ChevronRight,
     Bot,
     Workflow,
-    Cpu
+    Cpu,
+    TrendingUp
 } from 'lucide-react';
 import { content } from '../data/content';
 import ComparisonTable from './ComparisonTable';
@@ -27,7 +28,7 @@ const Services = () => {
             <div className="space-y-8 flex-grow">
                 {items.map((service, i) => (
                     <div key={i} className="group/item">
-                        <h4 className="font-bold text-lg text-white mb-2 flex items-center gap-2 group-hover/item:text-purple-400 transition-colors">
+                        <h4 className="font-bold text-lg text-white mb-2 flex items-center gap-2 group-hover/item:text-purple-400 transition-colors uppercase tracking-tight">
                             {service.title}
                             <ChevronRight size={16} className="opacity-0 group-hover/item:opacity-100 transition-all -translate-x-2 group-hover/item:translate-x-0" />
                         </h4>
@@ -50,7 +51,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-24">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
                     {renderCategory(
                         "SOCIAL",
                         content.services.social,
@@ -85,6 +86,13 @@ const Services = () => {
                         <Bot size={24} />,
                         "text-emerald-400",
                         "hover:border-emerald-500/30 hover:shadow-emerald-900/10"
+                    )}
+                    {renderCategory(
+                        "INTELLIGENT SCALE",
+                        content.services.scale,
+                        <TrendingUp size={24} />,
+                        "text-orange-400",
+                        "hover:border-orange-500/30 hover:shadow-orange-900/10"
                     )}
                 </div>
 
