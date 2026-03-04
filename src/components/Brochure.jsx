@@ -25,7 +25,7 @@ import {
 
 const Brochure = ({ onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalPages = 13;
+    const totalPages = 16;
 
     const nextSlide = () => {
         if (currentIndex < totalPages - 1) {
@@ -344,7 +344,96 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 9: THE ROADMAP */}
+                {/* PAGE 9: INTELLIGENT SCALE SPOTLIGHT */}
+                <Page className="bg-black justify-center">
+                    <div className="max-w-4xl mx-auto py-20">
+                        <div className="flex items-center gap-4 mb-12">
+                            <div className="w-12 h-12 bg-orange-600/20 text-orange-500 rounded-xl flex items-center justify-center">
+                                <TrendingUp />
+                            </div>
+                            <h2 className="text-4xl font-black uppercase tracking-tight text-white">Advanced <span className="text-orange-500">Intelligent Scale</span></h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-4">
+                                {content.services.scale.map((s, i) => (
+                                    <div key={i} className="p-6 bg-slate-900/40 rounded-2xl border border-slate-800 hover:border-orange-500/30 transition-colors">
+                                        <h4 className="font-bold text-sm uppercase tracking-widest text-orange-400 mb-2">{s.title}</h4>
+                                        <p className="text-xs text-slate-400 leading-relaxed">{s.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="p-10 bg-gradient-to-br from-orange-600/10 to-amber-600/10 rounded-3xl border border-orange-500/20 flex flex-col justify-center">
+                                <TrendingUp size={48} className="text-orange-500 mb-6" />
+                                <h3 className="text-3xl font-black mb-6 uppercase leading-none">Dominate the<br />Market.</h3>
+                                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Our proprietary suite of scale tools ensures you don't just exist online—you dominate your local search and outperform every competitor.
+                                </p>
+                                <div className="space-y-3">
+                                    {['Keywords Visibility Optimization', 'Hyper-Local Geo Grid Scans', 'In-depth Competitor Analysis'].map((f, i) => (
+                                        <div key={i} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-orange-400/80">
+                                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                                            {f}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Page>
+
+                {/* PAGE 10: GROWTH PACKAGES - THE FOUNDATION */}
+                <Page className="bg-slate-950 justify-center">
+                    <div className="max-w-5xl mx-auto py-20 text-center">
+                        <span className="text-indigo-500 font-black uppercase tracking-[0.2em] mb-4 block">04. Growth Packages</span>
+                        <h2 className="text-5xl font-black mb-12">Social Media <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Launchpads</span></h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {content.socialMediaPackages.tiers.slice(0, 3).map((tier, i) => (
+                                <div key={i} className={`p-8 rounded-3xl border ${tier.recommended ? 'bg-indigo-600/10 border-indigo-500' : 'bg-slate-900/40 border-slate-800'} text-left`}>
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">{tier.level}</div>
+                                    <h3 className="text-2xl font-black text-white italic mb-4 uppercase">{tier.name}</h3>
+                                    <div className="text-indigo-400 font-black mb-6">{tier.price}</div>
+                                    <div className="space-y-3">
+                                        {tier.features.slice(0, 7).map((f, fi) => (
+                                            <div key={fi} className="flex items-start gap-2 text-[10px] text-slate-400">
+                                                <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-1"></div>
+                                                <span className="font-bold uppercase tracking-tight">{f.label}: {f.value || (f.included ? 'Included' : 'N/A')}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Page>
+
+                {/* PAGE 11: GROWTH PACKAGES - THE POWERHOUSES */}
+                <Page className="bg-black justify-center">
+                    <div className="max-w-5xl mx-auto py-20 text-center">
+                        <h2 className="text-5xl font-black mb-12">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">Power Matrix</span></h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            {content.socialMediaPackages.tiers.slice(3, 5).map((tier, i) => (
+                                <div key={i} className={`p-10 rounded-3xl border bg-slate-900 border-slate-800 relative overflow-hidden group text-left`}>
+                                    <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                        <Zap size={120} />
+                                    </div>
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-indigo-400 mb-2">{tier.level}</div>
+                                    <h3 className="text-3xl font-black text-white italic mb-4 uppercase">{tier.name}</h3>
+                                    <div className="text-2xl font-black text-white mb-8">{tier.price}</div>
+                                    <div className="grid grid-cols-1 gap-3">
+                                        {tier.features.map((f, fi) => (
+                                            <div key={fi} className="flex items-start gap-3 text-[11px] text-slate-300">
+                                                <CheckCircle2 className="text-emerald-500 mt-0.5 shrink-0" size={14} />
+                                                <span className="font-bold uppercase tracking-tighter">{f.label} {f.value ? `(${f.value})` : ''}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Page>
+
+                {/* PAGE 12: THE ROADMAP */}
                 <Page className="bg-slate-950">
                     <div className="max-w-4xl mx-auto py-20">
                         <span className="text-purple-500 font-black uppercase tracking-[0.2em] mb-4 block text-center">04. The Success Plan</span>
