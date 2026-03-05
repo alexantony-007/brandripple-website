@@ -23,7 +23,33 @@ import BackToTop from './components/BackToTop';
 
 function App() {
   const [activeLegal, setActiveLegal] = useState(null);
-  const [currentPage, setCurrentPage] = useState('home');
+
+  // Initialize state from URL path
+  const getInitialPage = () => {
+    const path = window.location.pathname.replace('/', '');
+    return ['brand', 'bio', 'brochure'].includes(path) ? path : 'home';
+  };
+
+  const [currentPage, setPage] = useState(getInitialPage());
+
+  // Navigation wrapper that updates state AND browser history
+  const navigate = (page) => {
+    setPage(page);
+    const url = page === 'home' ? '/' : `/${page}`;
+    if (window.location.pathname !== url) {
+      window.history.pushState({ page }, '', url);
+    }
+  };
+
+  // Listen for browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = (event) => {
+      const page = event.state?.page || getInitialPage();
+      setPage(page);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,7 +58,7 @@ function App() {
   return (
     <div className="bg-slate-950 min-h-screen font-sans selection:bg-purple-500/30 selection:text-purple-200">
       <SEO />
-      <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
+      <Navbar onNavigate={navigate} currentPage={currentPage} />
 
       {currentPage === 'home' && (
         <>
@@ -48,22 +74,22 @@ function App() {
         </>
       )}
 
-      {currentPage === 'brand' && <BrandPage onBack={() => setCurrentPage('home')} />}
+      {currentPage === 'brand' && <BrandPage onBack={() => navigate('home')} />}
       {currentPage === 'bio' && (
         <BioPage
-          onBack={() => setCurrentPage('home')}
-          onNavigate={setCurrentPage}
+          onBack={() => navigate('home')}
+          onNavigate={navigate}
         />
       )}
-      {currentPage === 'brochure' && <Brochure onBack={() => setCurrentPage('bio')} />}
+      {currentPage === 'brochure' && <Brochure onBack={() => navigate('bio')} />}
 
       {!['home', 'brand', 'bio', 'brochure'].includes(currentPage) && (
-        <NotFoundPage onHome={() => setCurrentPage('home')} />
+        <NotFoundPage onHome={() => navigate('home')} />
       )}
 
       <Footer
         onShowLegal={(type) => setActiveLegal(legalContent[type])}
-        onNavigate={setCurrentPage}
+        onNavigate={navigate}
       />
 
       <LegalModal
