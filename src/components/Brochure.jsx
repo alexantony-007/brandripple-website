@@ -454,8 +454,8 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 10: SUCCESS STORIES */}
-                <Page className="bg-black">
+                {/* PAGE 13: SUCCESS STORIES */}
+                <Page className="bg-black justify-center">
                     <div className="max-w-5xl mx-auto py-20">
                         <h2 className="text-5xl font-black mb-16 text-center uppercase tracking-tight">Proven <span className="text-purple-500 underline decoration-indigo-500 decoration-4 underline-offset-8">Results</span></h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -476,7 +476,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 11: THE RIPPLE EFFECT */}
+                {/* PAGE 14: THE RIPPLE EFFECT */}
                 <Page className="bg-slate-950 justify-center">
                     <div className="max-w-4xl mx-auto py-20 flex flex-col items-center text-center">
                         <TrendingUp size={64} className="text-indigo-500 mb-8" />
@@ -502,7 +502,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 12: OUR MISSION */}
+                {/* PAGE 15: OUR MISSION */}
                 <Page className="bg-black justify-center">
                     <div className="max-w-4xl mx-auto py-20">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center h-full">
@@ -535,7 +535,7 @@ const Brochure = ({ onBack }) => {
                     </div>
                 </Page>
 
-                {/* PAGE 13: CALL TO ACTION */}
+                {/* PAGE 16: CALL TO ACTION */}
                 <Page className="bg-slate-950 justify-center items-center text-center">
                     <div className="max-w-2xl px-6">
                         <img src="/logo.png" alt="Logo" className="w-24 mb-12 mx-auto" />
