@@ -347,7 +347,7 @@ export const content = {
                 price: "AED 2,500 / Month",
                 features: [
                     { label: "Platforms Managed", value: "IG + FB" },
-                    { label: "Posts & Stories", value: "10 Posts, 8 Stories" },
+                    { label: "Posts & Stories", value: "4 Posts, 2 Stories" },
                     { label: "Reels & Shorts", value: "2 / Month" },
                     { label: "StoryBrand Profile Optimization", included: true },
                     { label: "Monthly Content Calendar", included: true },
@@ -365,7 +365,7 @@ export const content = {
                 recommended: true,
                 features: [
                     { label: "Platforms Managed", value: "IG+FB+LI" },
-                    { label: "Posts & Stories", value: "10 Posts, 10 Stories" },
+                    { label: "Posts & Stories", value: "8 Posts, 4 Stories" },
                     { label: "Reels & Shorts", value: "4 / Month" },
                     { label: "StoryBrand Profile Optimization", included: true },
                     { label: "Monthly Content Calendar & Strategy", included: true },
@@ -383,7 +383,7 @@ export const content = {
                 price: "AED 6,500 / Month",
                 features: [
                     { label: "Platforms Managed", value: "IG+FB+LI" },
-                    { label: "Posts & Stories", value: "15 Posts, 12 Stories" },
+                    { label: "Posts & Stories", value: "12 Posts, 6 Stories" },
                     { label: "Reels & Shorts", value: "6 / Month" },
                     { label: "Localized Bilingual Copy", value: "EN + AR" },
                     { label: "StoryBrand Profile Optimization", included: true },
@@ -401,7 +401,7 @@ export const content = {
                 price: "AED 9,500 / Month",
                 features: [
                     { label: "Platforms Managed", value: "IG+FB+LI" },
-                    { label: "Posts & Stories", value: "20 Posts, 15 Stories" },
+                    { label: "Posts & Stories", value: "16 Posts, 10 Stories" },
                     { label: "Reels & Shorts", value: "8 / Month" },
                     { label: "Monthly Commercial Photoshoot", included: true },
                     { label: "Localized Bilingual Copy", value: "EN + AR" },
@@ -420,7 +420,7 @@ export const content = {
                 price: "AED 14,000 / Month",
                 features: [
                     { label: "Platforms Managed", value: "IG+FB+LI" },
-                    { label: "Posts & Stories", value: "30+ Posts, 20+ Stories" },
+                    { label: "Posts & Stories", value: "20 Posts, 15 Stories" },
                     { label: "Reels & Shorts", value: "10 / Month" },
                     { label: "Monthly Commercial Photoshoot", included: true },
                     { label: "Localized Bilingual Copy", value: "EN + AR" },
